@@ -11,10 +11,13 @@ const $fragment2 = parseFragment`<b${3}>Location:</b>`;
 const $fragment3 = parseFragment`<b${3}>Tenure:</b>`;
 const $fragment4 = parseFragment`<div class="slds-card__header slds-grid${0}"${2}><header class="slds-media slds-media_center slds-has-flexi-truncate${0}"${2}><div class="slds-media__body${0}"${2}><h2 class="slds-card__header-title${0}"${2}><a href="javascript:void(0);" class="slds-card__header-link slds-truncate${0}" title="[object Object]"${2}><span${3}>Experiance</span></a></h2></div></header></div>`;
 const $fragment5 = parseFragment`<thead${3}><tr class="slds-text-title_caps${0}"${2}><th scope="col"${3}><div class="slds-truncate${0}" title="Position"${2}>Position</div></th><th scope="col"${3}><div class="slds-truncate${0}" title="Company"${2}>Company</div></th><th scope="col"${3}><div class="slds-truncate${0}" title="Image"${2}>From - To</div></th><th scope="col"${3}><div class="slds-truncate${0}" title="Image"${2}>Location</div></th></tr></thead>`;
-const $fragment6 = parseFragment`<button class="slds-button slds-button_neutral${0}"${2}>Close</button>`;
-const $fragment7 = parseFragment`<div class="slds-page-header slds-page-header_object-home${0}"${2}><div class="slds-media${0}"${2}><div class="slds-media__body${0}"${2}><div class="slds-grid slds-grid_vertical-align-start slds-grid_align-spread${0}"${2}><div class="slds-col${0}"${2}><h1 class="slds-page-header__title slds-truncate${0}" title="Certifications"${2}>Experiance</h1></div></div><ul class="slds-m-top_small${0}"${2}><li class="slds-list_horizontal slds-wrap${0}"${2}><span class="slds-badge slds-theme_success slds-m-right_x-small${0}"${2}>4.5+ Years as a Professional</span><span class="slds-badge slds-theme_success slds-m-right_x-small${0}"${2}>10+ Years as a Developer by Heart</span></li></ul></div></div></div>`;
-const $fragment8 = parseFragment`<b${3}>Location:</b>`;
-const $fragment9 = parseFragment`<b${3}>Tenure:</b>`;
+const $fragment6 = parseFragment`<h3 class="slds-text-heading_small slds-p-bottom_small slds-border_bottom${0}"${2}>Description</h3>`;
+const $fragment7 = parseFragment`<b${3}>Location:</b>`;
+const $fragment8 = parseFragment`<b${3}>Tenure:</b>`;
+const $fragment9 = parseFragment`<button class="slds-button slds-button_neutral${0}"${2}>Close</button>`;
+const $fragment10 = parseFragment`<div class="slds-page-header slds-page-header_object-home${0}"${2}><div class="slds-media${0}"${2}><div class="slds-media__body${0}"${2}><div class="slds-grid slds-grid_vertical-align-start slds-grid_align-spread${0}"${2}><div class="slds-col${0}"${2}><h1 class="slds-page-header__title slds-truncate${0}" title="Certifications"${2}>Experiance</h1></div></div><ul class="slds-m-top_small${0}"${2}><li class="slds-list_horizontal slds-wrap${0}"${2}><span class="slds-badge slds-theme_success slds-m-right_x-small${0}"${2}>4.5+ Years as a Professional</span><span class="slds-badge slds-theme_success slds-m-right_x-small${0}"${2}>10+ Years as a Developer by Heart</span></li></ul></div></div></div>`;
+const $fragment11 = parseFragment`<b${3}>Location:</b>`;
+const $fragment12 = parseFragment`<b${3}>Tenure:</b>`;
 const stc0 = {
   classMap: {
     "experience-section": true
@@ -125,36 +128,12 @@ const stc18 = {
 };
 const stc19 = {
   classMap: {
-    "slds-modal__footer": true
+    "slds-size_1-of-1": true,
+    "slds-p-around_small": true
   },
   key: 36
 };
 const stc20 = {
-  "slds-backdrop": true,
-  "slds-backdrop_open": true,
-  "slds-hide": true,
-  "jobDescriptionModalBackdrop": true
-};
-const stc21 = {
-  classMap: {
-    "experience-section": true,
-    "slds-m-top_x-large": true
-  },
-  key: 41
-};
-const stc22 = {
-  classMap: {
-    "slds-grid": true,
-    "slds-wrap": true
-  },
-  key: 45
-};
-const stc23 = {
-  "slds-size_1-of-1": true,
-  "slds-medium-size_1-of-2": true,
-  "slds-p-around_small": true
-};
-const stc24 = {
   classMap: {
     "slds-card": true,
     "experience-card": true,
@@ -162,43 +141,120 @@ const stc24 = {
     "slds-box": true,
     "slds-box_elevation-small": true
   },
-  key: 47
+  key: 37
 };
-const stc25 = {
+const stc21 = {
   classMap: {
     "slds-text-heading_small": true,
     "slds-p-bottom_small": true,
     "slds-border_bottom": true
   },
-  key: 48
+  key: 38
 };
-const stc26 = {
+const stc22 = {
   classMap: {
     "slds-card__body": true,
     "slds-card__body_inner": true,
     "slds-p-top_medium": true
   },
-  key: 49
+  key: 39
 };
-const stc27 = {
-  key: 50
+const stc23 = {
+  key: 40
 };
-const stc28 = {
+const stc24 = {
+  key: 43
+};
+const stc25 = {
   "slds-p-bottom_x-small": true
 };
-const stc29 = {
+const stc26 = {
   classMap: {
     "slds-card__footer": true,
     "slds-border_top": true,
     "slds-p-top_small": true
   },
-  key: 52
+  key: 45
 };
-const stc30 = {
+const stc27 = {
   classMap: {
     "slds-text-color_weak": true
   },
-  key: 53
+  key: 46
+};
+const stc28 = {
+  classMap: {
+    "slds-modal__footer": true
+  },
+  key: 51
+};
+const stc29 = {
+  "slds-backdrop": true,
+  "slds-backdrop_open": true,
+  "slds-hide": true,
+  "jobDescriptionModalBackdrop": true
+};
+const stc30 = {
+  classMap: {
+    "experience-section": true,
+    "slds-m-top_x-large": true
+  },
+  key: 56
+};
+const stc31 = {
+  classMap: {
+    "slds-grid": true,
+    "slds-wrap": true
+  },
+  key: 60
+};
+const stc32 = {
+  "slds-size_1-of-1": true,
+  "slds-medium-size_1-of-2": true,
+  "slds-p-around_small": true
+};
+const stc33 = {
+  classMap: {
+    "slds-card": true,
+    "experience-card": true,
+    "slds-p-around_medium": true,
+    "slds-box": true,
+    "slds-box_elevation-small": true
+  },
+  key: 62
+};
+const stc34 = {
+  classMap: {
+    "slds-text-heading_small": true,
+    "slds-p-bottom_small": true,
+    "slds-border_bottom": true
+  },
+  key: 63
+};
+const stc35 = {
+  classMap: {
+    "slds-card__body": true,
+    "slds-card__body_inner": true,
+    "slds-p-top_medium": true
+  },
+  key: 64
+};
+const stc36 = {
+  key: 65
+};
+const stc37 = {
+  classMap: {
+    "slds-card__footer": true,
+    "slds-border_top": true,
+    "slds-p-top_small": true
+  },
+  key: 67
+};
+const stc38 = {
+  classMap: {
+    "slds-text-color_weak": true
+  },
+  key: 68
 };
 function tmpl($api, $cmp, $slotset, $ctx) {
   const {st: api_static_fragment, k: api_key, d: api_dynamic_text, t: api_text, h: api_element, i: api_iterator, c: api_custom_element, fr: api_fragment, b: api_bind, gid: api_scoped_id} = $api;
@@ -221,7 +277,8 @@ function tmpl($api, $cmp, $slotset, $ctx) {
     }, [api_element("th", stc9, [api_element("div", {
       classMap: stc10,
       attrs: {
-        "title": exper.title
+        "title": exper.title,
+        "data-id": exper.id
       },
       key: 24,
       on: {
@@ -266,26 +323,31 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "id": api_scoped_id("modal-content-id-1")
     },
     key: 35
-  }, [api_text(api_dynamic_text($cmp.selectedPositionDescription) + " ")]), api_element("footer", stc19, [api_static_fragment($fragment6(), 38, {
+  }, [api_element("div", stc19, [api_element("div", stc20, [api_element("h2", stc21, [api_text(api_dynamic_text($cmp.selectedJob.title2))]), api_element("div", stc22, [api_element("div", stc23, [api_static_fragment($fragment6(), 42), api_element("ul", stc24, api_iterator($cmp.selectedJob.description, function (desc) {
+    return api_element("li", {
+      classMap: stc25,
+      key: api_key(44, desc)
+    }, [api_text(api_dynamic_text(desc))]);
+  }))])]), api_element("footer", stc26, [api_element("p", stc27, [api_static_fragment($fragment7(), 48), api_text(" " + api_dynamic_text($cmp.selectedJob.location) + " | "), api_static_fragment($fragment8(), 50), api_text(api_dynamic_text($cmp.selectedJob.dates))])])])])]), api_element("footer", stc28, [api_static_fragment($fragment9(), 53, {
     on: {
       "click": _m2 || ($ctx._m2 = api_bind($cmp.closeModal))
     }
   })])])]), api_element("div", {
-    classMap: stc20,
+    classMap: stc29,
     attrs: {
       "id": api_scoped_id("jobDescriptionModalBackdrop")
     },
-    key: 39
-  }), $cmp.webFormat ? api_fragment(40, [api_element("section", stc21, [$cmp.webFormat ? api_fragment(42, [api_static_fragment($fragment7(), 44)], 0) : null, api_element("div", stc22, api_iterator($cmp.experiences, function (exp) {
+    key: 54
+  }), $cmp.webFormat ? api_fragment(55, [api_element("section", stc30, [$cmp.webFormat ? api_fragment(57, [api_static_fragment($fragment10(), 59)], 0) : null, api_element("div", stc31, api_iterator($cmp.experiences, function (exp) {
     return api_element("div", {
-      classMap: stc23,
-      key: api_key(46, exp.title2)
-    }, [api_element("div", stc24, [api_element("h2", stc25, [api_text(api_dynamic_text(exp.title2))]), api_element("div", stc26, [api_element("ul", stc27, api_iterator(exp.description, function (desc) {
+      classMap: stc32,
+      key: api_key(61, exp.title2)
+    }, [api_element("div", stc33, [api_element("h2", stc34, [api_text(api_dynamic_text(exp.title2))]), api_element("div", stc35, [api_element("ul", stc36, api_iterator(exp.description, function (desc) {
       return api_element("li", {
-        classMap: stc28,
-        key: api_key(51, desc)
+        classMap: stc25,
+        key: api_key(66, desc)
       }, [api_text(api_dynamic_text(desc))]);
-    }))]), api_element("footer", stc29, [api_element("p", stc30, [api_static_fragment($fragment8(), 55), api_text(" " + api_dynamic_text(exp.location) + " | "), api_static_fragment($fragment9(), 57), api_text(" " + api_dynamic_text(exp.dates))])])])]);
+    }))]), api_element("footer", stc37, [api_element("p", stc38, [api_static_fragment($fragment11(), 70), api_text(" " + api_dynamic_text(exp.location) + " | "), api_static_fragment($fragment12(), 72), api_text(" " + api_dynamic_text(exp.dates))])])])]);
   }))])], 0) : null];
   /*LWC compiler v3.0.0*/
 }

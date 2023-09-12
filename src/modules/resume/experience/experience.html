@@ -69,7 +69,7 @@
         <template for:each={experiences} for:item="exper">
           <tr key={exper.title}>
             <th scope="row" data-label="Position">
-              <div class="slds-truncate" title={exper.title} onclick={openModal}>{exper.title}</div>
+              <div class="slds-truncate" title={exper.title} onclick={openModal} data-id={exper.id}>{exper.title}</div>
             </th>
             <td data-label="Company">
               <div class="slds-truncate" title={exper.company}>{exper.company}</div>
@@ -93,7 +93,25 @@
         <h2 class="slds-text-heading_medium slds-hyphenate" id="modal-heading-01">Job Description</h2>
       </header>
       <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
-        {selectedPositionDescription} <!-- This will display the job description -->
+        <div class="slds-size_1-of-1 slds-p-around_small">
+          <div class="slds-card experience-card slds-p-around_medium slds-box slds-box_elevation-small">
+            <h2 class="slds-text-heading_small slds-p-bottom_small slds-border_bottom">{selectedJob.title2}</h2>
+            <div class="slds-card__body slds-card__body_inner slds-p-top_medium">
+              <div>
+                <h3 class="slds-text-heading_small slds-p-bottom_small slds-border_bottom">Description</h3>
+                <ul>
+                  <template for:each={selectedJob.description} for:item="desc">
+                    <li class="slds-p-bottom_x-small" key={desc}>{desc}</li>
+                  </template>
+                </ul>
+              </div>
+            </div>
+            <footer class="slds-card__footer slds-border_top slds-p-top_small">
+              <p class="slds-text-color_weak"><b>Location:</b> {selectedJob.location} | <b>Tenure:</b>
+                {selectedJob.dates}</p>
+            </footer>
+          </div>
+        </div>
       </div>
       <footer class="slds-modal__footer">
         <button class="slds-button slds-button_neutral" onclick={closeModal}>Close</button>
@@ -106,21 +124,22 @@
     <section class="experience-section slds-m-top_x-large">
       <div class="slds-page-header slds-page-header_object-home" lwc:if={webFormat}>
         <div class="slds-media">
-            <div class="slds-media__body">
-                <div class="slds-grid slds-grid_vertical-align-start slds-grid_align-spread">
-                    <div class="slds-col">
-                        <h1 class="slds-page-header__title slds-truncate" title="Certifications">Experiance</h1>
-                    </div>
-                </div>
-                <ul class="slds-m-top_small">
-                    <li class="slds-list_horizontal slds-wrap">
-                        <span class="slds-badge slds-theme_success slds-m-right_x-small">4.5+ Years as a Professional</span>
-                        <span class="slds-badge slds-theme_success slds-m-right_x-small">10+ Years as a Developer by Heart</span>
-                    </li>
-                </ul>
+          <div class="slds-media__body">
+            <div class="slds-grid slds-grid_vertical-align-start slds-grid_align-spread">
+              <div class="slds-col">
+                <h1 class="slds-page-header__title slds-truncate" title="Certifications">Experiance</h1>
+              </div>
             </div>
+            <ul class="slds-m-top_small">
+              <li class="slds-list_horizontal slds-wrap">
+                <span class="slds-badge slds-theme_success slds-m-right_x-small">4.5+ Years as a Professional</span>
+                <span class="slds-badge slds-theme_success slds-m-right_x-small">10+ Years as a Developer by
+                  Heart</span>
+              </li>
+            </ul>
+          </div>
         </div>
-    </div>
+      </div>
 
       <div class="slds-grid slds-wrap">
         <template for:each={experiences} for:item="exp">

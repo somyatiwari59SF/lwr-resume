@@ -14,6 +14,7 @@ export default class Experience extends LightningElement {
   }
   experiences = [
     {
+      id: 1,
       title: "Technical Consultant",
       title2: "Technical Consultant at Salesforce India Pvt. Ltd.",
       company: "Salesforce India Pvt. Ltd.",
@@ -27,6 +28,7 @@ export default class Experience extends LightningElement {
       ],
     },
     {
+      id: 2,
       title: "Senior Salesforce Developer",
       title2: "Senior Salesforce Developer at 360 Degree Cloud Pvt. Ltd.",
       company: "360 Degree Cloud Pvt. Ltd.",
@@ -40,6 +42,7 @@ export default class Experience extends LightningElement {
       ],
     },
     {
+      id: 3,
       title: "Salesforce Developer",
       title2: "Salesforce Developer at MindRuby Technologies LLP",
       company: "MindRuby Technologies LLP",
@@ -52,6 +55,7 @@ export default class Experience extends LightningElement {
       ],
     },
     {
+      id: 4,
       title: "Salesforce Developer",
       title2: "Salesforce Developer at Idevate Solutions Pvt. Ltd.",
       company: "Idevate Solutions Pvt. Ltd.",
@@ -65,13 +69,21 @@ export default class Experience extends LightningElement {
     },
     // More experiences here...
   ];
+  selectedJob = {};
   openModal(event) {
-    // Here, you can set the job description based on the clicked position
-    this.selectedPositionDescription = 'The description of the job...'; // Replace this with the actual description
-console.log('hel');
+    let id = event.target.dataset.id;
+    console.log(id);
+    let selectedExperience = this.experiences.find(exp => exp.id == id);
+    if (selectedExperience) {
+        this.selectedJob = selectedExperience;
+        this.template.querySelector('.jobDescriptionModal').classList.remove('slds-hide');
+        this.template.querySelector('.jobDescriptionModalBackdrop').classList.remove('slds-hide');
+    } else {
+        this.selectedJob = {};
+    }
+    
+    console.log(this.selectedPositionDescription);
     // Display the modal and its backdrop
-    this.template.querySelector('.jobDescriptionModal').classList.remove('slds-hide');
-    this.template.querySelector('.jobDescriptionModalBackdrop').classList.remove('slds-hide');
 }
 
 closeModal() {

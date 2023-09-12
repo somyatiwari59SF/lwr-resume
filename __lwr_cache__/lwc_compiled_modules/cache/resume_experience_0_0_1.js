@@ -6,6 +6,7 @@ class Experience extends LightningElement {
     super(...args);
     this.format = "web";
     this.experiences = [{
+      id: 1,
       title: "Technical Consultant",
       title2: "Technical Consultant at Salesforce India Pvt. Ltd.",
       company: "Salesforce India Pvt. Ltd.",
@@ -13,6 +14,7 @@ class Experience extends LightningElement {
       dates: "July 2022 - Current",
       description: ["Drove advanced Industry Cloud solutions using Apex, Visualforce, and Lightning.", "Enhanced customer processes using specialized tools such as Data Raptors and Industries CPQ.", "Collaborated with AT&T for bespoke solution delivery, and ensured efficient and on-time user story delivery using Copado.", "Achieved consistent client satisfaction across various Salesforce domains like Manufacturing Cloud and Communication CPQ."]
     }, {
+      id: 2,
       title: "Senior Salesforce Developer",
       title2: "Senior Salesforce Developer at 360 Degree Cloud Pvt. Ltd.",
       company: "360 Degree Cloud Pvt. Ltd.",
@@ -20,6 +22,7 @@ class Experience extends LightningElement {
       dates: "August 2021 - July 2022",
       description: ["Designed and executed tailored Salesforce solutions aligning with business objectives.", "Collaborated with cross-functional teams for holistic solution delivery and ensured high data security standards.", "Enhanced system performance and code quality, and mentored junior developers.", "Delivered on-time projects across domains like Manufacturing Cloud and Sales Cloud."]
     }, {
+      id: 3,
       title: "Salesforce Developer",
       title2: "Salesforce Developer at MindRuby Technologies LLP",
       company: "MindRuby Technologies LLP",
@@ -27,6 +30,7 @@ class Experience extends LightningElement {
       dates: "September 2020  - August 2021",
       description: ["Developed scalable Salesforce solutions using Apex, Visualforce, and Lightning, leading to enhanced operational efficiency and customer experience.", "Contributed to diverse projects, with a significant focus on Sales Cloud and system integrations.", "Designed Asynchronous Apex solutions and parsed complex JSON for intuitive displays within Lightning Web Components (LWC)."]
     }, {
+      id: 4,
       title: "Salesforce Developer",
       title2: "Salesforce Developer at Idevate Solutions Pvt. Ltd.",
       company: "Idevate Solutions Pvt. Ltd.",
@@ -36,6 +40,7 @@ class Experience extends LightningElement {
     }
     // More experiences here...
     ];
+    this.selectedJob = {};
   }
   // default to web format
 
@@ -49,13 +54,20 @@ class Experience extends LightningElement {
     return this.format === "table";
   }
   openModal(event) {
-    // Here, you can set the job description based on the clicked position
-    this.selectedPositionDescription = 'The description of the job...'; // Replace this with the actual description
-    console.log('hel');
+    let id = event.target.dataset.id;
+    console.log(id);
+    let selectedExperience = this.experiences.find(exp => exp.id == id);
+    if (selectedExperience) {
+      this.selectedJob = selectedExperience;
+      this.template.querySelector('.jobDescriptionModal').classList.remove('slds-hide');
+      this.template.querySelector('.jobDescriptionModalBackdrop').classList.remove('slds-hide');
+    } else {
+      this.selectedJob = {};
+    }
+    console.log(this.selectedPositionDescription);
     // Display the modal and its backdrop
-    this.template.querySelector('.jobDescriptionModal').classList.remove('slds-hide');
-    this.template.querySelector('.jobDescriptionModalBackdrop').classList.remove('slds-hide');
   }
+
   closeModal() {
     this.template.querySelector('.jobDescriptionModal').classList.add('slds-hide');
     this.template.querySelector('.jobDescriptionModalBackdrop').classList.add('slds-hide');
@@ -68,7 +80,7 @@ _registerDecorators(Experience, {
       config: 0
     }
   },
-  fields: ["experiences"]
+  fields: ["experiences", "selectedJob"]
 });
 export default _registerComponent(Experience, {
   tmpl: _tmpl,

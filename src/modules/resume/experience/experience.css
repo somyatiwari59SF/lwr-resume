@@ -1,0 +1,58 @@
+.experience-section {
+    margin: 2rem 0;
+  }
+  .experiance-card{
+    page-break-inside: avoid;
+  }
+  
+  .experience-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .experience-item {
+    margin-bottom: 1.5rem;
+  }
+  
+  .experience-item h3 {
+    margin: 0.5rem 0;
+  }
+  
+  .experience-item p {
+    margin: 0;
+  }
+  li {
+    margin-left: 10px;
+    margin-right: 1px;
+    list-style:square;
+  }
+  .slds-card {
+    margin: 10px !important;
+    padding: 10px !important;
+  }
+  .nested-card {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid #e3e4e6; /* A subtle light gray border */
+  }
+  .experience-card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.experience-card h2 {
+    color: #0070d2; /* or another primary color */
+}
+
+.experience-card ul {
+    padding-left: 1.25rem;
+}
+
+.experience-card li:before {
+    content: '•';
+    color: #0070d2;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+

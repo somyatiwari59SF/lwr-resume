@@ -1,0 +1,43 @@
+<template>
+    <section class="slds-m-top_medium hobbies-section">
+      <div class="slds-page-header">
+        <div class="slds-page-header__row">
+          <div class="slds-page-header__col-title">
+            <div class="slds-media">
+              <div class="slds-media__body">
+                <div class="slds-page-header__name">
+                  <div class="slds-page-header__name-title">
+                    <h1>
+                      <span class="slds-page-header__title slds-truncate" title="My Hobbies">Hobbies</span>
+                    </h1>
+                  </div>
+                </div>
+                <p class="slds-page-header__name-meta">Pursuing what I love</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slds-grid slds-grid_vertical">
+        <template for:each={hobbies} for:item="hobby">
+          <lightning-card class="hobby-card slds-m-top_medium slds-p-top_xx-small" key={hobby.name} title={hobby.name}>
+            <div class="slds-p-horizontal_small">
+              <div>
+                <b>Description:</b> {hobby.description}
+                <hr />
+                <b>Interest Level:</b> {hobby.interestLevel}
+                <hr />
+                <b>Years of Experience:</b> {hobby.years}
+              </div>
+            </div>
+            <p slot="footer">
+              <template if:true={hobby.relatedLink}>
+                <a href={hobby.relatedLink} target="_blank">Learn More</a>
+              </template>
+            </p>
+          </lightning-card>
+        </template>
+      </div>
+    </section>
+  </template>
+  

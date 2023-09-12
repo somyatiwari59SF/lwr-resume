@@ -1,0 +1,35 @@
+.project-section {
+  margin: 2rem 0;
+}
+.experiance-card {
+  page-break-inside: avoid;
+}
+
+.experience-list {
+  list-style: none;
+  padding: 0;
+}
+
+.experience-item {
+  margin-bottom: 1.5rem;
+}
+
+.experience-item h3 {
+  margin: 0.5rem 0;
+}
+
+.experience-item p {
+  margin: 0;
+}
+li {
+  margin-left: 10px;
+  margin-right: 1px;
+  list-style: square;
+}
+.slds-card {
+  margin: 10px !important;
+  padding: 10px !important;
+}
+hr {
+  margin: 5px 0px;
+}

@@ -1,0 +1,32 @@
+<template>
+    <section class="skills-section">
+        <!-- Header for Skills -->
+        <div class="slds-page-header">
+            <div class="slds-page-header__row">
+                <div class="slds-page-header__col-title">
+                    <div class="slds-media">
+                        <div class="slds-media__body">
+                            <h2 class="slds-page-header__title slds-truncate" title="Skills">Skills</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slds-m-top_medium slds-p-top_xx-small slds-grid slds-wrap slds-pill_container" lwc:if={printFormat}>
+            <template for:each={skills} for:item="skill">
+                <div key={skill} class="slds-pill slds-col slds-p-around_x-small">
+                    <div class="slds-tile slds-tile_board">
+                        <p class="slds-truncate">{skill}</p>
+                    </div>
+                </div>
+            </template>
+        </div>
+        <div class="skills-container slds-m-top_medium slds-p-top_xx-small slds-grid slds-wrap"  lwc:if={webFormat}>
+            <template for:each={skills} for:item="skill">
+                <div key={skill} class="slds-badge skill-pill slds-p-around_x-small">
+                    {skill}
+                </div>
+            </template>
+        </div>        
+    </section>
+</template>

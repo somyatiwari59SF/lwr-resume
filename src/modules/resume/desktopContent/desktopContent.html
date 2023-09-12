@@ -1,0 +1,27 @@
+<template>
+    <lightning-card class="hobby-card slds-m-top_medium slds-p-top_xx-small">
+        <div class="slds-m-around_medium">
+            <lightning-tabset>
+                <lightning-tab label="Detail">
+                    <resume-desktop-content-detail></resume-desktop-content-detail>
+                </lightning-tab>
+                <lightning-tab label="Certifications">
+                    <resume-certification format="web"></resume-certification>
+                </lightning-tab>
+                <lightning-tab label="Experiance">
+                    <resume-experience format="web"></resume-experience>
+                </lightning-tab>
+                <lightning-tab label="Skills">
+                    <resume-skill format="web"></resume-skill>
+                </lightning-tab>
+                <lightning-tab label="Education">
+                    <resume-education format="web"></resume-education>
+                </lightning-tab>
+                <lightning-tab label="Related">
+                    <resume-certification format="table"></resume-certification>
+                    <resume-experience format="table"></resume-experience>
+                    <resume-education format="table"></resume-education></lightning-tab>
+            </lightning-tabset>
+        </div>
+    </lightning-card>
+</template>

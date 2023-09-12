@@ -1,0 +1,50 @@
+.resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f0f0f0;
+  }
+  
+  .header-content h1 {
+    margin: 0;
+    color: #333;
+  }
+  
+  .header-content .subtitle {
+    margin: 0;
+    color: #666;
+  }
+  
+  .contact-info {
+    margin: 0;
+  }
+  
+  .header-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .header-nav li {
+    margin-right: 1rem;
+  }
+  
+  .header-nav a {
+    text-decoration: none;
+    color: #333;
+  }
+  .slds-page-header__name-meta a {
+    text-decoration: none; /* Removes the underline */
+    color: inherit; /* Takes on the same color as the surrounding text */
+}
+
+.slds-page-header__name-meta a:hover, .slds-page-header__name-meta a:focus {
+    text-decoration: underline; /* Adds underline on hover and focus for accessibility */
+}
+@media print {
+  .hide-details-on-print {
+      display: none;
+  }
+}

@@ -1,0 +1,28 @@
+<template>
+    <div class={paperClass}>
+        <!-- Print format view -->
+        <div class="slds-grid slds-gutters slds-wrap" lwc:if={printFormat}>
+            <div class="slds-col slds-size_2-of-2">
+                <resume-header onprintviewtoggle={toggleFormat}></resume-header>
+            </div>
+            <div class="slds-col slds-size_2-of-3">
+                <resume-experience format="print"></resume-experience>
+                <resume-project></resume-project>
+            </div>
+            <div class="slds-col slds-size_1-of-3">
+                <resume-education format="print"></resume-education>
+                <resume-certification format="print"></resume-certification>
+                <resume-skill format="print"></resume-skill>
+                <resume-hobby></resume-hobby>
+            </div>
+        </div>
+
+        <!-- Web format (Record Detail) view -->
+        <div lwc:if={webFormat}>
+            <resume-desktop-header onprintviewtoggle={toggleFormat}></resume-desktop-header>
+            <div class="slds-m-around_medium">
+            </div>
+            <resume-desktop-content></resume-desktop-content>
+        </div>
+    </div>
+</template>

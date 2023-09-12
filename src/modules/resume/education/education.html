@@ -1,0 +1,95 @@
+<template>
+    <section class="education-section" lwc:if={printFormat}>
+        <div class="slds-page-header">
+            <div class="slds-page-header__row">
+                <div class="slds-page-header__col-title">
+                    <div class="slds-media">
+                        <div class="slds-media__body">
+                            <div class="slds-page-header__name">
+                                <div class="slds-page-header__name-title">
+                                    <h1>
+                                        <span class="slds-page-header__title slds-truncate"
+                                            title="Rohde Corp - 80,000 Widgets">Education</span>
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="  slds-m-top_medium slds-p-top_xx-small slds-grid slds-grid_vertical">
+            <template for:each={education} for:item="edu">
+                <article class="slds-card education-card" key={edu.institute}>
+                    <div class="slds-card__header slds-grid">
+                        <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                            <div class="slds-media__body">
+                                <h2 class="slds-card__header-title">
+                                    <a href="#" class="slds-card__header-link slds-truncate" title="Accounts">
+                                        <span>{edu.institute}</span>
+                                    </a>
+                                </h2>
+                            </div>
+                        </header>
+                    </div>
+                    <div class="slds-card__body slds-card__body_inner">
+                        {edu.degree} | {edu.duration}
+                        <div lwc:if={edu.hasAchievement}>
+                            <hr />
+                            <b>Achievements:</b>
+                            <ul>
+                                <template for:each={edu.achievements} for:item="resp">
+                                    <li key={resp}>
+                                        {resp}
+                                    </li>
+                                </template>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </template>
+        </div>
+    </section>
+    <template lwc:if={webFormat}>
+        <section class="education-section slds-m-top_large">
+            <header class="slds-page-header">
+                <h1 class="slds-text-heading_large">Education</h1>
+            </header>
+            <div class="slds-m-top_medium slds-p-top_medium slds-grid slds-wrap">
+                <template for:each={education} for:item="edu">
+                    <article class="slds-card education-card slds-m-bottom_medium slds-size_1-of-1 slds-medium-size_1-of-2" key={edu.institute}>
+                        <div class="slds-card__header slds-grid">
+                            <div class="slds-icon_container slds-icon-standard-account slds-m-right_small">
+                                <lightning-icon class="my-icon" icon-name="utility:education" alternative-text="Education" title="Image"></lightning-icon>
+                            </div>
+                            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                <h2 class="slds-card__header-title">
+                                    <a href="#" class="slds-card__header-link slds-text-link_reset">
+                                        {edu.institute}
+                                    </a>
+                                </h2>
+                            </header>
+                        </div>
+                        <div class="slds-card__body slds-card__body_inner">
+                            <p class="slds-text-title">{edu.degree} <span class="slds-m-left_small slds-text-body_small slds-text-color_weak">{edu.duration}</span></p>
+                            <template if:true={edu.hasAchievement}>
+                                <div class="slds-m-top_medium">
+                                    <hr class="slds-divider"/>
+                                    <h3 class="slds-text-title slds-m-top_small slds-m-bottom_xx-small">Achievements:</h3>
+                                    <ul>
+                                        <template for:each={edu.achievements} for:item="resp">
+                                            <li key={resp}>
+                                                {resp}
+                                            </li>
+                                        </template>
+                                    </ul>
+                                </div>
+                            </template>
+                        </div>
+                    </article>
+                </template>
+            </div>
+        </section>
+    </template>
+    
+</template>

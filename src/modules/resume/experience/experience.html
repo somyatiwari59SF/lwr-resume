@@ -1,0 +1,148 @@
+<template>
+  <section class="experience-section" lwc:if={printFormat}>
+    <div class="slds-page-header">
+      <div class="slds-page-header__row">
+        <div class="slds-page-header__col-title">
+          <div class="slds-media">
+            <div class="slds-media__body">
+              <div class="slds-page-header__name">
+                <div class="slds-page-header__name-title">
+                  <h1>
+                    <span class="slds-page-header__title slds-truncate"
+                      title="Rohde Corp - 80,000 Widgets">Experience</span>
+                  </h1>
+                </div>
+              </div>
+              <p class="slds-page-header__name-meta">4.5+ Year Experience</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slds-grid slds-grid_vertical">
+      <template for:each={experiences} for:item="exp">
+        <lightning-card class="experiance-card slds-m-top_medium slds-p-top_xx-small" key={exp.title2}
+          title={exp.title2}>
+          <div class="slds-p-horizontal_small">
+            <ul>
+              <template for:each={exp.description} for:item="desc">
+                <li key={desc}>{desc}</li>
+              </template>
+            </ul>
+          </div>
+          <p slot="footer"><b>Location:</b> {exp.location} | <b>Tenure:</b> {exp.dates}</p>
+        </lightning-card>
+      </template>
+    </div>
+  </section>
+  <!-- Related List using SLDS -->
+  <div class="slds-card slds-m-around_medium nested-card" lwc:if={tableFormat}>
+    <div class="slds-card__header slds-grid">
+      <header class="slds-media slds-media_center slds-has-flexi-truncate">
+        <div class="slds-media__body">
+          <h2 class="slds-card__header-title">
+            <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="[object Object]">
+              <span>Experiance</span>
+            </a>
+          </h2>
+        </div>
+      </header>
+    </div>
+    <table class="slds-table slds-table_fixed-layout slds-table_bordered slds-no-row-hover slds-table_cell-buffer">
+      <thead>
+        <tr class="slds-text-title_caps">
+          <th scope="col">
+            <div class="slds-truncate" title="Position">Position</div>
+          </th>
+          <th scope="col">
+            <div class="slds-truncate" title="Company">Company</div>
+          </th>
+          <th scope="col">
+            <div class="slds-truncate" title="Image">From - To</div>
+          </th>
+          <th scope="col">
+            <div class="slds-truncate" title="Image">Location</div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <template for:each={experiences} for:item="exper">
+          <tr key={exper.title}>
+            <th scope="row" data-label="Position">
+              <div class="slds-truncate" title={exper.title} onclick={openModal}>{exper.title}</div>
+            </th>
+            <td data-label="Company">
+              <div class="slds-truncate" title={exper.company}>{exper.company}</div>
+            </td>
+            <td data-label="From - To">
+              <div class="slds-truncate" title={exper.dates}>{exper.dates}</div>
+            </td>
+            <td data-label="Location">
+              <div class="slds-truncate" title={exper.location}>{exper.location}</div>
+            </td>
+          </tr>
+        </template>
+      </tbody>
+    </table>
+  </div>
+  <!-- Modal -->
+  <div class="slds-modal slds-fade-in-open slds-hide jobDescriptionModal" tabindex="-1" role="dialog"
+    id="jobDescriptionModal">
+    <div class="slds-modal__container">
+      <header class="slds-modal__header">
+        <h2 class="slds-text-heading_medium slds-hyphenate" id="modal-heading-01">Job Description</h2>
+      </header>
+      <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+        {selectedPositionDescription} <!-- This will display the job description -->
+      </div>
+      <footer class="slds-modal__footer">
+        <button class="slds-button slds-button_neutral" onclick={closeModal}>Close</button>
+      </footer>
+    </div>
+  </div>
+  <div class="slds-backdrop slds-backdrop_open slds-hide jobDescriptionModalBackdrop" id="jobDescriptionModalBackdrop">
+  </div>
+  <template lwc:if={webFormat}>
+    <section class="experience-section slds-m-top_x-large">
+      <div class="slds-page-header slds-page-header_object-home" lwc:if={webFormat}>
+        <div class="slds-media">
+            <div class="slds-media__body">
+                <div class="slds-grid slds-grid_vertical-align-start slds-grid_align-spread">
+                    <div class="slds-col">
+                        <h1 class="slds-page-header__title slds-truncate" title="Certifications">Experiance</h1>
+                    </div>
+                </div>
+                <ul class="slds-m-top_small">
+                    <li class="slds-list_horizontal slds-wrap">
+                        <span class="slds-badge slds-theme_success slds-m-right_x-small">4.5+ Years as a Professional</span>
+                        <span class="slds-badge slds-theme_success slds-m-right_x-small">10+ Years as a Developer by Heart</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+      <div class="slds-grid slds-wrap">
+        <template for:each={experiences} for:item="exp">
+          <div class="slds-size_1-of-1 slds-medium-size_1-of-2 slds-p-around_small" key={exp.title2}>
+            <div class="slds-card experience-card slds-p-around_medium slds-box slds-box_elevation-small">
+              <h2 class="slds-text-heading_small slds-p-bottom_small slds-border_bottom">{exp.title2}</h2>
+              <div class="slds-card__body slds-card__body_inner slds-p-top_medium">
+                <ul>
+                  <template for:each={exp.description} for:item="desc">
+                    <li class="slds-p-bottom_x-small" key={desc}>{desc}</li>
+                  </template>
+                </ul>
+              </div>
+              <footer class="slds-card__footer slds-border_top slds-p-top_small">
+                <p class="slds-text-color_weak"><b>Location:</b> {exp.location} | <b>Tenure:</b> {exp.dates}</p>
+              </footer>
+            </div>
+          </div>
+        </template>
+      </div>
+    </section>
+  </template>
+
+
+</template>

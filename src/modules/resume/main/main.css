@@ -1,0 +1,48 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* Ensures that body takes the full viewport height */
+  min-height: 100vh;
+  margin: 0;
+  
+}
+
+.a4-paper {
+  overflow-y: auto; 
+  background: white;
+  padding: 20px; 
+  box-sizing: border-box;
+  margin: 0 auto;
+
+}
+@media print {
+  body {
+      background-color: white;
+      height: auto;
+      padding: 0;
+      margin: 20mm;  /* vertical margins for printing */
+  }
+
+  .a4-paper {
+      page-break-after: always;
+      margin-bottom: 10mm;  /* space between pages when printed */
+      max-height: none;
+      overflow: visible;
+  }
+
+  .a4-paper:last-child {
+      page-break-after: avoid; /* Prevent an extra page at the end */
+  }
+}
+.print-format {
+  width: 250mm;
+}
+
+.web-format {
+  /* Adjust this if you want a specific width for web format, else remove */
+  width: auto; 
+}

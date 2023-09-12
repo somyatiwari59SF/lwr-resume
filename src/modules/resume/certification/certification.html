@@ -1,0 +1,135 @@
+<template>
+    <section class="certification-section">
+        <!-- Compact Header -->
+        <div class="slds-page-header" lwc:if={printFormat}>
+            <div class="slds-page-header__row">
+                <div class="slds-page-header__col-title">
+                    <div class="slds-media">
+                        <div class="slds-media__body">
+                            <h2 class="slds-page-header__title slds-truncate" title="Certifications">Certifications</h2>
+                            <!-- Split Certification Counts -->
+                            <p class="slds-text-body_small">12x SF Certified</p>
+                            <p class="slds-text-body_small">2x PLC Accredited</p>
+                            <p class="slds-text-body_small">2x Copado Certified</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slds-page-header slds-page-header_object-home" lwc:if={webFormat}>
+            <div class="slds-media">
+                <div class="slds-media__body">
+                    <div class="slds-grid slds-grid_vertical-align-start slds-grid_align-spread">
+                        <div class="slds-col">
+                            <h1 class="slds-page-header__title slds-truncate" title="Certifications">Certifications</h1>
+                        </div>
+                    </div>
+                    <ul class="slds-m-top_small">
+                        <li class="slds-list_horizontal slds-wrap">
+                            <span class="slds-badge slds-theme_success slds-m-right_x-small">12x SF Certified</span>
+                            <span class="slds-badge slds-theme_success slds-m-right_x-small">2x PLC Accredited</span>
+                            <span class="slds-badge slds-theme_success slds-m-right_x-small">2x Copado Certified</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compact Certification Display -->
+        <div class="slds-m-top_medium slds-p-top_xx-small slds-grid slds-gutters slds-wrap" lwc:if={printFormat}>
+            <template for:each={certifications} for:item="cert">
+                <div key={cert.certNumber} class="slds-col slds-size_1-of-1 slds-m-around_x-small cert-section">
+                    <div class="slds-grid slds-gutters slds-wrap slds-grid_vertical-align-center">
+                        <div class="slds-col slds-size_1-of-3 slds-media slds-media_center slds-align_absolute-center">
+                            <img width="50px" src={cert.certImgSrc} />
+                        </div>
+                        <div class="slds-col slds-size_2-of-3 slds-align_absolute-center slds-text-align_left">
+                            <b>{cert.certName}</b>
+                            <template lwc:if={printMode}>
+                                <div class="cert-details" lwc:if={cert.hascertNumber}>{cert.certNumber}</div>
+                                <div class="cert-details" lwc:if={cert.hasissueDate}>{cert.issueDate}</div>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+        <div class="slds-m-top_medium slds-p-top_xx-small flex-wrapper" lwc:if={webFormat}>
+            <div class="grid-container">
+                <template for:each={certifications} for:item="cert">
+                    <div key={cert.certNumber} class="cert-section">
+                        <div class="slds-grid slds-gutters slds-wrap slds-grid_vertical-align-center">
+                            <div
+                                class="slds-col slds-size_1-of-3 slds-media slds-media_center slds-align_absolute-center">
+                                <img width="100px" src={cert.certImgSrc} />
+                            </div>
+                            <div class="slds-col slds-size_2-of-3 slds-align_absolute-center slds-text-align_left">
+                                <b>{cert.certName}</b>
+                                <template lwc:if={printMode}>
+                                    <div class="cert-details" lwc:if={cert.hascertNumber}>{cert.certNumber}</div>
+                                    <div class="cert-details" lwc:if={cert.hasissueDate}>{cert.issueDate}</div>
+                                </template>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+        <!-- Related List using SLDS -->
+        <div class="slds-card slds-m-around_medium nested-card" lwc:if={tableFormat}>
+            <div class="slds-card__header slds-grid">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__body">
+                        <h2 class="slds-card__header-title">
+                            <a href="javascript:void(0);" class="slds-card__header-link slds-truncate"
+                                title="[object Object]">
+                                <span>Certifications</span>
+                            </a>
+                        </h2>
+                    </div>
+                </header>
+            </div>
+            <table
+                class="slds-table slds-table_fixed-layout slds-table_bordered slds-no-row-hover slds-table_cell-buffer">
+                <thead>
+                    <tr class="slds-text-title_caps">
+                        <th scope="col">
+                            <div class="slds-truncate" title="Certificate Name">Certificate Name</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Issue Date">Issue Date</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Image">Certification Logo</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Image">Certificate Number</div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={certifications} for:item="cert">
+                        <tr key={cert.certNumber}>
+                            <th scope="row" data-label="Certificate Name">
+                                <div class="slds-truncate" title={cert.certName}>{cert.certName}</div>
+                            </th>
+                            <td data-label="Issue Date">
+                                <template lwc:if={cert.hasissueDate}>
+                                    <div class="slds-truncate" title={cert.issueDate}>{cert.issueDate}</div>
+                                </template>
+                            </td>
+                            <td data-label="Image">
+                                <img src={cert.certImgSrc} alt={cert.certName} width="50" />
+                            </td>
+                            <td data-label="Issue Date">
+                                <template lwc:if={cert.hascertNumber}>
+                                    <div class="slds-truncate" title={cert.issueDate}>{cert.certNumber}</div>
+                                </template>
+                            </td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</template>

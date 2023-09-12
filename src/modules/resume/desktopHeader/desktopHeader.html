@@ -1,0 +1,79 @@
+<template>
+    <div class="slds-page-header slds-page-header_record-home">
+        <div class="slds-page-header__row">
+            <div class="slds-page-header__col-title">
+                <div class="slds-media">
+                    <div class="slds-media__figure">
+                        <span class="slds-icon_container slds-icon-standard-opportunity">
+                            <lightning-icon class="my-icon" icon-name="utility:user" alternative-text="Education"
+                                title="Image"></lightning-icon>
+                        </span>
+                    </div>
+                    <div class="slds-media__body">
+                        <div class="slds-page-header__name">
+                            <div class="slds-page-header__name-title">
+                                <h1>
+                                    <span>Developer</span>
+                                    <span class="slds-page-header__title slds-truncate"
+                                        title={candidateInfo.name}>{candidateInfo.name}</span>
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-page-header__col-actions">
+                <div class="slds-page-header__controls">
+                    <div class="slds-page-header__control">
+                        <ul class="slds-button-group-list">
+                            <li>
+                                <button class="slds-button slds-button_neutral" onclick={handleClick}
+                                    data-button="call">Call</button>
+                            </li>
+                            <li>
+                                <button class="slds-button slds-button_neutral" onclick={handleClick}
+                                    data-button="linkedin">LinkedIn</button>
+                            </li>
+                            <li>
+                                <button class="slds-button slds-button_neutral" onclick={handleClick}
+                                    data-button="twitter">Twitter</button>
+                            </li>
+                            <li>
+                                <button class="slds-button slds-button_neutral" onclick={handleClick}
+                                    data-button="print">Print</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slds-page-header__row slds-page-header__row_gutters">
+            <div class="slds-page-header__col-details">
+                <ul class="slds-page-header__detail-row">
+                    <li class="slds-page-header__detail-block">
+                        <div class="slds-text-title slds-truncate" title="Field 1">Address</div>
+                        <div class="slds-truncate"
+                            title="Description that demonstrates truncation with a long text field.">34, Ghisaji Patel
+                            Nagar, Indore, M.P. 452008</div>
+                    </li>
+                    <li class="slds-page-header__detail-block">
+                        <div class="slds-text-title slds-truncate" title="Field 2 (3)">Total Experiance
+                        </div>
+                        <div class="slds-truncate" title="Multiple Values">4.5+ Years</div>
+                    </li>
+                    <li class="slds-page-header__detail-block">
+                        <div class="slds-text-title slds-truncate" title="Field 3">LinkedIn</div>
+                        <div class="slds-truncate" title="Hyperlink">
+                            <a href="#">@somyatiwari59</a>
+                        </div>
+                    </li>
+                    <li class="slds-page-header__detail-block">
+                        <div class="slds-text-title slds-truncate" title="Field 4">Current Position</div>
+                        <div class="slds-truncate" title="Description (2-line truncation—must use JS to truncate).">
+                            Technical Consultant at Salesforce, India Pvt. Ltd.</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</template>

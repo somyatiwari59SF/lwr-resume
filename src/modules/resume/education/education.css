@@ -1,0 +1,21 @@
+.education-section {
+    margin: 2rem 0;
+  }
+.slds-truncate {
+  text-overflow: clip !important;
+  white-space: normal !important;
+}
+.education-card {
+  page-break-inside: avoid;
+}
+.education-section {
+  page-break-inside: avoid;
+}
+
+hr {
+  margin: 2px 0px;
+}
+.my-icon {
+  --slds-c-icon-color-foreground-default: orange;
+  --slds-c-icon-color-background: white;
+}

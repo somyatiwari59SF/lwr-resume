@@ -28,11 +28,12 @@ class Main extends LightningElement {
     if (mm < 10) mm = "0" + mm;
     const formattedToday = dd + "/" + mm + "/" + yyyy;
     if (this.printFormat) {
+      let currentTitle = document.title;
       document.title = "Somya Tiwari Resume " + formattedToday;
       var delayInMilliseconds = 1000; //1 second
       setTimeout(() => {
         window.print();
-        document.title = "Somya Tiwari Resume";
+        document.title = currentTitle;
         this.toggleFormat();
       }, 0);
     }

@@ -7,9 +7,6 @@ class DesktopContent extends LightningElement {
       name: "Somya Tiwari"
     };
   }
-  connectedCallback() {
-    document.title = 'Somya Tiwari Resume';
-  }
   /*LWC compiler v3.0.0*/
 }
 _registerDecorators(DesktopContent, {

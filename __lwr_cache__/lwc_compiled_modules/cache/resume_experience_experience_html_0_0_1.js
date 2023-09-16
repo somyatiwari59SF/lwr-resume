@@ -5,6 +5,7 @@ import _implicitStylesheets from "./experience.css";
 import _implicitScopedStylesheets from "./experience.scoped.css?scoped=true";
 
 import _lightningCard from "lightning/card";
+import _lightningIcon from "lightning/icon";
 import {parseFragment, registerTemplate} from "lwc";
 const $fragment1 = parseFragment`<div class="slds-page-header${0}"${2}><div class="slds-page-header__row${0}"${2}><div class="slds-page-header__col-title${0}"${2}><div class="slds-media${0}"${2}><div class="slds-media__body${0}"${2}><div class="slds-page-header__name${0}"${2}><div class="slds-page-header__name-title${0}"${2}><h1${3}><span class="slds-page-header__title slds-truncate${0}" title="Rohde Corp - 80,000 Widgets"${2}>Experience</span></h1></div></div><p class="slds-page-header__name-meta${0}"${2}>4.5+ Year Experience</p></div></div></div></div></div>`;
 const $fragment2 = parseFragment`<b${3}>Location:</b>`;
@@ -15,7 +16,7 @@ const $fragment6 = parseFragment`<h3 class="slds-text-heading_small slds-p-botto
 const $fragment7 = parseFragment`<b${3}>Location:</b>`;
 const $fragment8 = parseFragment`<b${3}>Tenure:</b>`;
 const $fragment9 = parseFragment`<button class="slds-button slds-button_neutral${0}"${2}>Close</button>`;
-const $fragment10 = parseFragment`<div class="slds-page-header slds-page-header_object-home${0}"${2}><div class="slds-media${0}"${2}><div class="slds-media__body${0}"${2}><div class="slds-grid slds-grid_vertical-align-start slds-grid_align-spread${0}"${2}><div class="slds-col${0}"${2}><h1 class="slds-page-header__title slds-truncate${0}" title="Certifications"${2}>Experiance</h1></div></div><ul class="slds-m-top_small${0}"${2}><li class="slds-list_horizontal slds-wrap${0}"${2}><span class="slds-badge slds-theme_success slds-m-right_x-small${0}"${2}>4.5+ Years as a Professional</span><span class="slds-badge slds-theme_success slds-m-right_x-small${0}"${2}>10+ Years as a Developer by Heart</span></li></ul></div></div></div>`;
+const $fragment10 = parseFragment`<div class="slds-media__body${0}"${2}><h1 class="slds-page-header__title slds-truncate${0}" title="Experience"${2}>Experience</h1><p class="slds-page-header__name-meta${0}"${2}>4.5+ Years as a Professional | 10+ Years as a Developer by Heart</p></div>`;
 const $fragment11 = parseFragment`<b${3}>Location:</b>`;
 const $fragment12 = parseFragment`<b${3}>Tenure:</b>`;
 const stc0 = {
@@ -203,58 +204,78 @@ const stc30 = {
 };
 const stc31 = {
   classMap: {
-    "slds-grid": true,
-    "slds-wrap": true
+    "slds-page-header": true,
+    "slds-page-header_object-home": true
+  },
+  key: 57
+};
+const stc32 = {
+  classMap: {
+    "slds-media": true
+  },
+  key: 58
+};
+const stc33 = {
+  classMap: {
+    "slds-media__figure": true
+  },
+  key: 59
+};
+const stc34 = {
+  classMap: {
+    "slds-icon_container": true,
+    "slds-icon-standard-education": true
+  },
+  attrs: {
+    "title": "Experience"
   },
   key: 60
 };
-const stc32 = {
+const stc35 = {
+  props: {
+    "iconName": "standard:education",
+    "alternativeText": "Experience",
+    "size": "medium"
+  },
+  key: 61
+};
+const stc36 = {
+  classMap: {
+    "slds-grid": true,
+    "slds-wrap": true
+  },
+  key: 64
+};
+const stc37 = {
+  "slds-col": true,
   "slds-size_1-of-1": true,
   "slds-medium-size_1-of-2": true,
   "slds-p-around_small": true
 };
-const stc33 = {
-  classMap: {
-    "slds-card": true,
-    "experience-card": true,
-    "slds-p-around_medium": true,
-    "slds-box": true,
-    "slds-box_elevation-small": true
-  },
-  key: 62
-};
-const stc34 = {
-  classMap: {
-    "slds-text-heading_small": true,
-    "slds-p-bottom_small": true,
-    "slds-border_bottom": true
-  },
-  key: 63
-};
-const stc35 = {
+const stc38 = {
   classMap: {
     "slds-card__body": true,
     "slds-card__body_inner": true,
     "slds-p-top_medium": true
   },
-  key: 64
+  key: 67
 };
-const stc36 = {
-  key: 65
+const stc39 = {
+  key: 68
 };
-const stc37 = {
+const stc40 = {
   classMap: {
     "slds-card__footer": true,
     "slds-border_top": true,
     "slds-p-top_small": true
   },
-  key: 67
+  key: 70
 };
-const stc38 = {
+const stc41 = {
   classMap: {
     "slds-text-color_weak": true
   },
-  key: 68
+  key: 71
 };
 function tmpl($api, $cmp, $slotset, $ctx) {
   const {st: api_static_fragment, k: api_key, d: api_dynamic_text, t: api_text, h: api_element, i: api_iterator, c: api_custom_element, fr: api_fragment, b: api_bind, gid: api_scoped_id} = $api;
@@ -338,16 +359,22 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "id": api_scoped_id("jobDescriptionModalBackdrop")
     },
     key: 54
-  }), $cmp.webFormat ? api_fragment(55, [api_element("section", stc30, [$cmp.webFormat ? api_fragment(57, [api_static_fragment($fragment10(), 59)], 0) : null, api_element("div", stc31, api_iterator($cmp.experiences, function (exp) {
+  }), $cmp.webFormat ? api_fragment(55, [api_element("section", stc30, [api_element("div", stc31, [api_element("div", stc32, [api_element("div", stc33, [api_element("span", stc34, [api_custom_element("lightning-icon", _lightningIcon, stc35)])]), api_static_fragment($fragment10(), 63)])]), api_element("div", stc36, api_iterator($cmp.experiences, function (exp) {
     return api_element("div", {
-      classMap: stc32,
-      key: api_key(61, exp.title2)
-    }, [api_element("div", stc33, [api_element("h2", stc34, [api_text(api_dynamic_text(exp.title2))]), api_element("div", stc35, [api_element("ul", stc36, api_iterator(exp.description, function (desc) {
+      classMap: stc37,
+      key: api_key(65, exp.title2)
+    }, [api_custom_element("lightning-card", _lightningCard, {
+      props: {
+        "title": exp.title2,
+        "iconName": "standard:education"
+      },
+      key: 66
+    }, [api_element("div", stc38, [api_element("ul", stc39, api_iterator(exp.description, function (desc) {
       return api_element("li", {
         classMap: stc25,
-        key: api_key(66, desc)
+        key: api_key(69, desc)
       }, [api_text(api_dynamic_text(desc))]);
-    }))]), api_element("footer", stc37, [api_element("p", stc38, [api_static_fragment($fragment11(), 70), api_text(" " + api_dynamic_text(exp.location) + " | "), api_static_fragment($fragment12(), 72), api_text(" " + api_dynamic_text(exp.dates))])])])]);
+    }))]), api_element("footer", stc40, [api_element("p", stc41, [api_static_fragment($fragment11(), 73), api_text(" " + api_dynamic_text(exp.location) + " | "), api_static_fragment($fragment12(), 75), api_text(" " + api_dynamic_text(exp.dates))])])])]);
   }))])], 0) : null];
   /*LWC compiler v3.0.0*/
 }

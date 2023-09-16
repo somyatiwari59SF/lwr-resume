@@ -8,6 +8,7 @@ import _resumeDesktopContentDetail from "resume/desktopContentDetail";
 import _lightningTab from "lightning/tab";
 import _resumeCertification from "resume/certification";
 import _resumeExperience from "resume/experience";
+import _resumeProject from "resume/project";
 import _resumeSkill from "resume/skill";
 import _resumeEducation from "resume/education";
 import _lightningTabset from "lightning/tabset";
@@ -65,7 +66,7 @@ const stc8 = {
 };
 const stc9 = {
   props: {
-    "label": "Skills"
+    "label": "Projects"
   },
   key: 9
 };
@@ -77,7 +78,7 @@ const stc10 = {
 };
 const stc11 = {
   props: {
-    "label": "Education"
+    "label": "Skills"
   },
   key: 11
 };
@@ -89,19 +90,19 @@ const stc12 = {
 };
 const stc13 = {
   props: {
-    "label": "Related"
+    "label": "Education"
   },
   key: 13
 };
 const stc14 = {
   props: {
-    "format": "table"
+    "format": "web"
   },
   key: 14
 };
 const stc15 = {
   props: {
-    "format": "table"
+    "label": "Related"
   },
   key: 15
 };
@@ -111,9 +112,21 @@ const stc16 = {
   },
   key: 16
 };
+const stc17 = {
+  props: {
+    "format": "table"
+  },
+  key: 17
+};
+const stc18 = {
+  props: {
+    "format": "table"
+  },
+  key: 18
+};
 function tmpl($api, $cmp, $slotset, $ctx) {
   const {c: api_custom_element, h: api_element} = $api;
-  return [api_custom_element("lightning-card", _lightningCard, stc0, [api_element("div", stc1, [api_custom_element("lightning-tabset", _lightningTabset, stc2, [api_custom_element("lightning-tab", _lightningTab, stc3, [api_custom_element("resume-desktop-content-detail", _resumeDesktopContentDetail, stc4)]), api_custom_element("lightning-tab", _lightningTab, stc5, [api_custom_element("resume-certification", _resumeCertification, stc6)]), api_custom_element("lightning-tab", _lightningTab, stc7, [api_custom_element("resume-experience", _resumeExperience, stc8)]), api_custom_element("lightning-tab", _lightningTab, stc9, [api_custom_element("resume-skill", _resumeSkill, stc10)]), api_custom_element("lightning-tab", _lightningTab, stc11, [api_custom_element("resume-education", _resumeEducation, stc12)]), api_custom_element("lightning-tab", _lightningTab, stc13, [api_custom_element("resume-certification", _resumeCertification, stc14), api_custom_element("resume-experience", _resumeExperience, stc15), api_custom_element("resume-education", _resumeEducation, stc16)])])])])];
+  return [api_custom_element("lightning-card", _lightningCard, stc0, [api_element("div", stc1, [api_custom_element("lightning-tabset", _lightningTabset, stc2, [api_custom_element("lightning-tab", _lightningTab, stc3, [api_custom_element("resume-desktop-content-detail", _resumeDesktopContentDetail, stc4)]), api_custom_element("lightning-tab", _lightningTab, stc5, [api_custom_element("resume-certification", _resumeCertification, stc6)]), api_custom_element("lightning-tab", _lightningTab, stc7, [api_custom_element("resume-experience", _resumeExperience, stc8)]), api_custom_element("lightning-tab", _lightningTab, stc9, [api_custom_element("resume-project", _resumeProject, stc10)]), api_custom_element("lightning-tab", _lightningTab, stc11, [api_custom_element("resume-skill", _resumeSkill, stc12)]), api_custom_element("lightning-tab", _lightningTab, stc13, [api_custom_element("resume-education", _resumeEducation, stc14)]), api_custom_element("lightning-tab", _lightningTab, stc15, [api_custom_element("resume-certification", _resumeCertification, stc16), api_custom_element("resume-experience", _resumeExperience, stc17), api_custom_element("resume-education", _resumeEducation, stc18)])])])])];
   /*LWC compiler v3.0.0*/
 }
 export default registerTemplate(tmpl);

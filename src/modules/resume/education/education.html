@@ -34,17 +34,6 @@
                     </div>
                     <div class="slds-card__body slds-card__body_inner">
                         {edu.degree} | {edu.duration}
-                        <div lwc:if={edu.hasAchievement}>
-                            <hr />
-                            <b>Achievements:</b>
-                            <ul>
-                                <template for:each={edu.achievements} for:item="resp">
-                                    <li key={resp}>
-                                        {resp}
-                                    </li>
-                                </template>
-                            </ul>
-                        </div>
                     </div>
                 </article>
             </template>
@@ -53,22 +42,31 @@
     <template lwc:if={webFormat}>
         <section class="education-section slds-m-top_large">
             <header class="slds-page-header">
-                <h1 class="slds-text-heading_large">Education</h1>
+                <h1 class="slds-text-heading_large">Education Summary</h1>
+                <div class="slds-p-top_medium">
+                    <lightning-progress-indicator variant="shade" type="path" current-step="January 2023 - December 2025">
+                        <template for:each={timeline} for:item="edu">
+                            <lightning-progress-step key={edu.duration} label={edu.degree} value={edu.duration}></lightning-progress-step>
+                        </template>
+                    </lightning-progress-indicator>
+                </div>
             </header>
-            <div class="slds-m-top_medium slds-p-top_medium slds-grid slds-wrap">
+            <div class="slds-m-top_medium slds-p-top_medium slds-grid slds-wrap slds-gutters">
                 <template for:each={education} for:item="edu">
-                    <article class="slds-card education-card slds-m-bottom_medium slds-size_1-of-1 slds-medium-size_1-of-2" key={edu.institute}>
-                        <div class="slds-card__header slds-grid">
-                            <div class="slds-icon_container slds-icon-standard-account slds-m-right_small">
-                                <lightning-icon class="my-icon" icon-name="utility:education" alternative-text="Education" title="Image"></lightning-icon>
+                    <lightning-card key={edu.institute} class="education-card slds-p-around_xx-small slds-medium-size_1-of-2">
+                        <div slot="title">
+                            <div class="slds-media">
+                                <div class="slds-icon_container slds-icon-standard-account slds-m-right_small">
+                                    <lightning-icon class="my-icon" icon-name="utility:education" alternative-text="Education" title="Image"></lightning-icon>
+                                </div>
+                                <div class="slds-media__body">
+                                    <h2 class="slds-card__header-title">
+                                        <a href="#" class="slds-card__header-link slds-text-link_reset">
+                                            {edu.institute}
+                                        </a>
+                                    </h2>
+                                </div>
                             </div>
-                            <header class="slds-media slds-media_center slds-has-flexi-truncate">
-                                <h2 class="slds-card__header-title">
-                                    <a href="#" class="slds-card__header-link slds-text-link_reset">
-                                        {edu.institute}
-                                    </a>
-                                </h2>
-                            </header>
                         </div>
                         <div class="slds-card__body slds-card__body_inner">
                             <p class="slds-text-title">{edu.degree} <span class="slds-m-left_small slds-text-body_small slds-text-color_weak">{edu.duration}</span></p>
@@ -86,10 +84,11 @@
                                 </div>
                             </template>
                         </div>
-                    </article>
+                    </lightning-card>
                 </template>
             </div>
         </section>
     </template>
+    
     
 </template>

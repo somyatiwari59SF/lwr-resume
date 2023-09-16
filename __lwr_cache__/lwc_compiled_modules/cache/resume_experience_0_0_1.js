@@ -72,6 +72,22 @@ class Experience extends LightningElement {
     this.template.querySelector('.jobDescriptionModal').classList.add('slds-hide');
     this.template.querySelector('.jobDescriptionModalBackdrop').classList.add('slds-hide');
   }
+  renderedCallback() {
+    const cardComponents = this.template.querySelectorAll("lightning-card");
+    console.log(cardComponents);
+    cardComponents.forEach(cardComponent => {
+      console.log(cardComponent);
+      // Try to access the shadow root
+      const shadow = cardComponent.shadowRoot;
+      console.log(shadow);
+      if (shadow) {
+        const articleElement = shadow.querySelector("article.slds-card");
+        if (articleElement) {
+          articleElement.classList.add("slds-card_boundary");
+        }
+      }
+    });
+  }
   /*LWC compiler v3.0.0*/
 }
 _registerDecorators(Experience, {

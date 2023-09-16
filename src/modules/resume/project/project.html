@@ -1,5 +1,5 @@
 <template>
-  <section class="project-section">
+  <section class="project-section" if:true={printFormat}>
     <div class="slds-page-header">
       <div class="slds-page-header__row">
         <div class="slds-page-header__col-title">
@@ -21,7 +21,8 @@
     </div>
     <div class="slds-grid slds-grid_vertical">
       <template for:each={projects} for:item="proj">
-        <lightning-card class="experiance-card slds-m-top_medium slds-p-top_xx-small" key={proj.title} title={proj.title}>
+        <lightning-card class="experiance-card slds-m-top_medium slds-p-top_xx-small" key={proj.title}
+          title={proj.title}>
           <div class="slds-p-horizontal_small">
             <div>
               <b>Objective/Scope:</b> {proj.objective}
@@ -50,4 +51,76 @@
       </template>
     </div>
   </section>
+  <template if:true={webFormat}>
+    <!-- Web Version Header -->
+    <div class="slds-page-header">
+      <div class="slds-media">
+        <div class="slds-media__body">
+          <h1 class="slds-page-header__title slds-truncate" title="Projects">Projects</h1>
+          <p class="slds-page-header__name-meta">20+ Projects Worked Upon</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects Detail Section -->
+    <template for:each={projects} for:item="proj">
+      <div key={proj.title} class="slds-p-around_medium">
+        <lightning-card>
+        <h2 slot="title">{proj.title}</h2>
+        <div slot="footer">
+          <strong>Technologies:</strong>
+          <template for:each={proj.technologies} for:item="tech">
+            <span key={tech} class="slds-badge slds-theme_brand slds-m-right_x-small">{tech}</span>
+          </template>
+        </div>
+        <div class="slds-p-around_medium">
+
+          <div class="slds-grid slds-wrap">
+            <!-- Grid Item for Lists -->
+            <div class="slds-col slds-size_1-of-3">
+              <strong>Difficulties:</strong>
+              <ul>
+                <template for:each={proj.difficulties} for:item="difficulty">
+                  <li key={difficulty}>{difficulty}</li>
+                </template>
+              </ul>
+            </div>
+
+            <div class="slds-col slds-size_1-of-3">
+              <strong>Major Functionalities:</strong>
+              <ul>
+                <template for:each={proj.majorFunctionalities} for:item="functionality">
+                  <li key={functionality}>{functionality}</li>
+                </template>
+              </ul>
+            </div>
+
+            <div class="slds-col slds-size_1-of-3">
+              <strong>Achievements:</strong>
+              <ul>
+                <template for:each={proj.achievements} for:item="achievement">
+                  <li key={achievement}>{achievement}</li>
+                </template>
+              </ul>
+            </div>
+          </div>
+
+          <p class="slds-m-top_medium"><strong>Objective:</strong> {proj.objective}</p>
+          <p><strong>Team Size:</strong> {proj.teamSize}</p>
+          <p><strong>Role on the Team:</strong> {proj.role}</p>
+          <p><strong>Major thing learned on the project:</strong> {proj.learnings}</p>
+
+          <div class="slds-m-top_medium">
+            <strong>Responsibilities:</strong>
+            <ul>
+              <template for:each={proj.responsibilities} for:item="resp">
+                <li key={resp} class="slds-list_dotted">{resp}</li>
+              </template>
+            </ul>
+          </div>
+        </div>
+      </lightning-card>
+      </div>
+    </template>
+  </template>
 </template>

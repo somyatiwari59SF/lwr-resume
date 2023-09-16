@@ -44,6 +44,9 @@ const stc3 = {
   key: 6
 };
 const stc4 = {
+  props: {
+    "format": "print"
+  },
   key: 7
 };
 const stc5 = {

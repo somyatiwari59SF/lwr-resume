@@ -33,3 +33,46 @@ li {
 hr {
   margin: 5px 0px;
 }
+
+.project-header {
+  background-color: #f3f4f6;
+  padding: 2rem;
+  text-align: center;
+}
+
+.filter-container {
+  margin-top: 1rem;
+}
+
+.project-timeline {
+  display: flex;
+  overflow-x: auto;
+  padding: 1rem 0;
+  white-space: nowrap;
+}
+
+.milestone {
+  display: inline-block;
+  margin-right: 20px;
+  padding: 10px 20px;
+  background-color: #e0e0e0;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.project-card {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 2rem 0;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.tech-tag {
+  display: inline-block;
+  margin-right: 5px;
+  padding: 5px 10px;
+  background-color: #0099cc;
+  color: white;
+  border-radius: 5px;
+}

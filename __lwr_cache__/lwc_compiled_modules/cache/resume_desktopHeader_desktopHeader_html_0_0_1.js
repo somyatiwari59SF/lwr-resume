@@ -10,11 +10,12 @@ const $fragment1 = parseFragment`<span${3}>Developer</span>`;
 const $fragment2 = parseFragment`<button class="slds-button slds-button_neutral${0}" data-button="call"${2}>Call</button>`;
 const $fragment3 = parseFragment`<button class="slds-button slds-button_neutral${0}" data-button="linkedin"${2}>LinkedIn</button>`;
 const $fragment4 = parseFragment`<button class="slds-button slds-button_neutral${0}" data-button="twitter"${2}>Twitter</button>`;
-const $fragment5 = parseFragment`<button class="slds-button slds-button_neutral${0}" data-button="print"${2}>Print</button>`;
-const $fragment6 = parseFragment`<li class="slds-page-header__detail-block${0}"${2}><div class="slds-text-title slds-truncate${0}" title="Field 1"${2}>Address</div><div class="slds-truncate${0}" title="Description that demonstrates truncation with a long text field."${2}>34, Ghisaji Patel Nagar, Indore, M.P. 452008</div></li>`;
-const $fragment7 = parseFragment`<li class="slds-page-header__detail-block${0}"${2}><div class="slds-text-title slds-truncate${0}" title="Field 2 (3)"${2}>Total Experiance</div><div class="slds-truncate${0}" title="Multiple Values"${2}>4.5+ Years</div></li>`;
-const $fragment8 = parseFragment`<div class="slds-text-title slds-truncate${0}" title="Field 3"${2}>LinkedIn</div>`;
-const $fragment9 = parseFragment`<li class="slds-page-header__detail-block${0}"${2}><div class="slds-text-title slds-truncate${0}" title="Field 4"${2}>Current Position</div><div class="slds-truncate${0}" title="Description (2-line truncation—must use JS to truncate)."${2}>Technical Consultant at Salesforce, India Pvt. Ltd.</div></li>`;
+const $fragment5 = parseFragment`<button class="slds-button slds-button_neutral${0}" data-button="trailhead"${2}>Trailblazer Profile</button>`;
+const $fragment6 = parseFragment`<button class="slds-button slds-button_neutral${0}" data-button="print"${2}>Print</button>`;
+const $fragment7 = parseFragment`<li class="slds-page-header__detail-block${0}"${2}><div class="slds-text-title slds-truncate${0}" title="Field 1"${2}>Address</div><div class="slds-truncate${0}" title="Description that demonstrates truncation with a long text field."${2}>34, Ghisaji Patel Nagar, Indore, M.P. 452008</div></li>`;
+const $fragment8 = parseFragment`<li class="slds-page-header__detail-block${0}"${2}><div class="slds-text-title slds-truncate${0}" title="Field 2 (3)"${2}>Total Experiance</div><div class="slds-truncate${0}" title="Multiple Values"${2}>4.5+ Years</div></li>`;
+const $fragment9 = parseFragment`<div class="slds-text-title slds-truncate${0}" title="Field 3"${2}>LinkedIn</div>`;
+const $fragment10 = parseFragment`<li class="slds-page-header__detail-block${0}"${2}><div class="slds-text-title slds-truncate${0}" title="Field 4"${2}>Current Position</div><div class="slds-truncate${0}" title="Description (2-line truncation—must use JS to truncate)."${2}>Technical Consultant at Salesforce, India Pvt. Ltd.</div></li>`;
 const stc0 = {
   classMap: {
     "slds-page-header": true,
@@ -126,48 +127,51 @@ const stc19 = {
   key: 27
 };
 const stc20 = {
-  classMap: {
-    "slds-page-header__row": true,
-    "slds-page-header__row_gutters": true
-  },
   key: 30
 };
 const stc21 = {
   classMap: {
-    "slds-page-header__col-details": true
+    "slds-page-header__row": true,
+    "slds-page-header__row_gutters": true
   },
-  key: 31
+  key: 33
 };
 const stc22 = {
   classMap: {
-    "slds-page-header__detail-row": true
+    "slds-page-header__col-details": true
   },
-  key: 32
+  key: 34
 };
 const stc23 = {
   classMap: {
-    "slds-page-header__detail-block": true
+    "slds-page-header__detail-row": true
   },
-  key: 37
+  key: 35
 };
 const stc24 = {
+  classMap: {
+    "slds-page-header__detail-block": true
+  },
+  key: 40
+};
+const stc25 = {
   classMap: {
     "slds-truncate": true
   },
   attrs: {
     "title": "Hyperlink"
   },
-  key: 40
+  key: 43
 };
-const stc25 = {
+const stc26 = {
   attrs: {
     "href": "#"
   },
-  key: 41
+  key: 44
 };
 function tmpl($api, $cmp, $slotset, $ctx) {
   const {c: api_custom_element, h: api_element, st: api_static_fragment, d: api_dynamic_text, t: api_text, b: api_bind} = $api;
-  const {_m0, _m1, _m2, _m3, _m4, _m5, _m6, _m7} = $ctx;
+  const {_m0, _m1, _m2, _m3, _m4, _m5, _m6, _m7, _m8, _m9} = $ctx;
   return [api_element("div", stc0, [api_element("div", stc1, [api_element("div", stc2, [api_element("div", stc3, [api_element("div", stc4, [api_element("span", stc5, [api_custom_element("lightning-icon", _lightningIcon, stc6)])]), api_element("div", stc7, [api_element("div", stc8, [api_element("div", stc9, [api_element("h1", stc10, [api_static_fragment($fragment1(), 12), api_element("span", {
     classMap: stc11,
     attrs: {
@@ -190,7 +194,11 @@ function tmpl($api, $cmp, $slotset, $ctx) {
     on: {
       "click": _m7 || ($ctx._m7 = api_bind($cmp.handleClick))
     }
-  })])])])])])]), api_element("div", stc20, [api_element("div", stc21, [api_element("ul", stc22, [api_static_fragment($fragment6(), 34), api_static_fragment($fragment7(), 36), api_element("li", stc23, [api_static_fragment($fragment8(), 39), api_element("div", stc24, [api_element("a", stc25, [api_text("@somyatiwari59")])])]), api_static_fragment($fragment9(), 43)])])])])];
+  })]), api_element("li", stc20, [api_static_fragment($fragment6(), 32, {
+    on: {
+      "click": _m9 || ($ctx._m9 = api_bind($cmp.handleClick))
+    }
+  })])])])])])]), api_element("div", stc21, [api_element("div", stc22, [api_element("ul", stc23, [api_static_fragment($fragment7(), 37), api_static_fragment($fragment8(), 39), api_element("li", stc24, [api_static_fragment($fragment9(), 42), api_element("div", stc25, [api_element("a", stc26, [api_text("@somyatiwari59")])])]), api_static_fragment($fragment10(), 46)])])])])];
   /*LWC compiler v3.0.0*/
 }
 export default registerTemplate(tmpl);

@@ -15,6 +15,9 @@ export default class DesktopHeader extends LightningElement {
     if (button === "linkedin") {
         this.openInNewTab("https://linkedin.com/in/somyatiwari59");
     }
+    if (button === "trailhead") {
+        this.openInNewTab("https://trailblazer.me/id/somyatiwari59");
+    }
     if (button === "call") {
       this.openInNewTab("tel:+919826010181");
     }

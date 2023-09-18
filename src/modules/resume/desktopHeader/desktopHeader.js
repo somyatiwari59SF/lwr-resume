@@ -10,13 +10,13 @@ export default class DesktopHeader extends LightningElement {
       this.dispatchEvent(new CustomEvent("printviewtoggle"));
     }
     if (button === "twitter") {
-        this.openInNewTab("https://twitter.com/somyatiwari59");
+      this.openInNewTab("https://twitter.com/somyatiwari59");
     }
     if (button === "linkedin") {
-        this.openInNewTab("https://linkedin.com/in/somyatiwari59");
+      this.openInNewTab("https://linkedin.com/in/somyatiwari59");
     }
     if (button === "trailhead") {
-        this.openInNewTab("https://trailblazer.me/id/somyatiwari59");
+      this.openInNewTab("https://trailblazer.me/id/somyatiwari59");
     }
     if (button === "call") {
       this.openInNewTab("tel:+919826010181");
@@ -28,5 +28,15 @@ export default class DesktopHeader extends LightningElement {
       "_blank",
       "menubar=no,location=no,status=no,scrollbars=yes"
     );
+  }
+  isMobile;
+  renderedCallback() {
+    console.log(this.isMobile);
+    if (window.innerWidth <= 768) {
+      this.isMobile = true;
+    } else {
+      this.isMobile = false;
+    }
+    console.log(this.isMobile);
   }
 }

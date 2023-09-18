@@ -6,6 +6,7 @@ class DesktopHeader extends LightningElement {
     this.candidateInfo = {
       name: "Somya Tiwari"
     };
+    this.isMobile = void 0;
   }
   handleClick(event) {
     const button = event.currentTarget.dataset.button;
@@ -28,12 +29,22 @@ class DesktopHeader extends LightningElement {
   openInNewTab(url) {
     window.open(url, "_blank", "menubar=no,location=no,status=no,scrollbars=yes");
   }
+  renderedCallback() {
+    console.log(this.isMobile);
+    if (window.innerWidth <= 768) {
+      this.isMobile = true;
+    } else {
+      this.isMobile = false;
+    }
+    console.log(this.isMobile);
+  }
   /*LWC compiler v3.0.0*/
 }
 _registerDecorators(DesktopHeader, {
   track: {
     candidateInfo: 1
-  }
+  },
+  fields: ["isMobile"]
 });
 export default _registerComponent(DesktopHeader, {
   tmpl: _tmpl,

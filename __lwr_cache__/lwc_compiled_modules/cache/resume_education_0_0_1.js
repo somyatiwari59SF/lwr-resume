@@ -11,7 +11,7 @@ class Education extends LightningElement {
       duration: "January 2023 - December 2025",
       achievements: []
     }, {
-      institute: "Lakshmi Narain College of Technology, Indore",
+      institute: "LNCT (RGPV), Indore",
       degree: "Bachelor of Technology - Computer Science",
       duration: "June 2015 - June 2019",
       hasAchievement: true,

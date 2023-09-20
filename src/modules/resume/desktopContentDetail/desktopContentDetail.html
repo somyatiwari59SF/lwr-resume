@@ -31,8 +31,11 @@
                     class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-form-element_stacked slds-hint-parent">
                     <span class="slds-form-element__label">Date of Birth</span>
                     <div class="slds-form-element__control">
-                        <div class="slds-form-element__static">
+                        <div class="slds-form-element__static" lwc:if={showPrivateInfo}>
                             26/11/1997
+                        </div>
+                        <div class="slds-form-element__static" lwc:else>
+                            XX/XX/XXXX
                         </div>
                     </div>
                 </div>
@@ -68,8 +71,11 @@
                     class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-form-element_stacked slds-hint-parent">
                     <span class="slds-form-element__label">Mobile Phone</span>
                     <div class="slds-form-element__control">
-                        <div class="slds-form-element__static">
+                        <div class="slds-form-element__static" lwc:if={showPrivateInfo}>
                             +91 98260 10481
+                        </div>
+                        <div class="slds-form-element__static" lwc:else>
+                            +91 XXXXX XXXXX
                         </div>
                     </div>
                 </div>

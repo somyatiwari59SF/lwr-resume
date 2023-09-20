@@ -30,7 +30,7 @@
                 <div class="slds-text-heading_small slds-p-bottom_small">Details</div>
                 <ul class="slds-list_vertical slds-list_vertical-space">
                     <li>
-                        <strong>Total Experience:</strong> 4.5+ Years
+                        <strong>Total Experience:</strong> {totalExperiance}
                     </li>
                     <li>
                         <strong>LinkedIn:</strong> <a href="#">@somyatiwari59</a>
@@ -100,13 +100,15 @@
                     <li class="slds-page-header__detail-block">
                         <div class="slds-text-title slds-truncate" title="Field 1">Address</div>
                         <div class="slds-truncate"
-                            title="Description that demonstrates truncation with a long text field.">34, Ghisaji Patel
+                            title="Description that demonstrates truncation with a long text field." lwc:if={showPrivateInfo}>34, Ghisaji Patel
                             Nagar, Indore, M.P. 452008</div>
+                            <div class="slds-truncate"
+                                title="Description that demonstrates truncation with a long text field." lwc:else>Indore, M.P</div>
                     </li>
                     <li class="slds-page-header__detail-block">
                         <div class="slds-text-title slds-truncate" title="Field 2 (3)">Total Experiance
                         </div>
-                        <div class="slds-truncate" title="Multiple Values">4.5+ Years</div>
+                        <div class="slds-truncate" title="Multiple Values">{totalExperiance}</div>
                     </li>
                     <li class="slds-page-header__detail-block">
                         <div class="slds-text-title slds-truncate" title="Field 3">LinkedIn</div>

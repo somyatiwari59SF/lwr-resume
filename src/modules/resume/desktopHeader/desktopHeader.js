@@ -39,4 +39,38 @@ export default class DesktopHeader extends LightningElement {
     }
     console.log(this.isMobile);
   }
+  get totalExperiance(){
+    const startDate = new Date(2019, 5, 3); // Month is 0-indexed, so 5 represents June.
+    const currentDate = new Date();
+    let years = currentDate.getFullYear() - startDate.getFullYear();
+    let months = currentDate.getMonth() - startDate.getMonth();
+    // Adjust the calculation if the current date's day is less than the start date's day
+    if (currentDate.getDate() < startDate.getDate()) {
+        months--;
+    }
+    // Handle negative months
+    if (months < 0) {
+        years--;
+        months += 12; // Adjust the months and decrease year by 1
+    }
+    return `${years} Years and ${months} Months`;
+  }
+  get showPrivateInfo() {
+    const params = new URLSearchParams(window.location.search);
+    for (let param of params) {
+        // Decode the parameter value
+        let decodedValue;
+        try {
+            decodedValue = atob(param[0]);
+        } catch (e) {
+            continue;  // If decoding fails, continue to the next parameter
+        }
+        if (decodedValue === "showEncryptedData") {
+            return true;
+        }
+    }
+    return false;
+}
+
+
 }

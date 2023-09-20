@@ -193,8 +193,12 @@
                     </div>
                     <div class="slds-form-element__control">
                         <div class="slds-form-element__static">
-                            <a href="#">22 Sanjay Park
+                            <a href="#" lwc:if={showPrivateInfo}>22 Sanjay Park
                                 <br />Viman Darshan Society
+                                <br />Pune, M.H.
+                                <br />
+                            </a>
+                            <a href="#" lwc:else>
                                 <br />Pune, M.H.
                                 <br />
                             </a>
@@ -208,9 +212,13 @@
                     <span class="slds-form-element__label">Permanent Address</span>
                     <div class="slds-form-element__control">
                         <div class="slds-form-element__static">
-                            <a href="#">34 / 146 Ghisaji Patel Nagar
+                            <a href="#" lwc:if={showPrivateInfo}>34 / 146 Ghisaji Patel Nagar
                                 <br />Indore, M.P. 452016
                                 <br />India
+                                <br />
+                            </a>
+                            <a href="#" lwc:else>
+                                <br />Indore, M.P.
                                 <br />
                             </a>
                         </div>

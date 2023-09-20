@@ -15,12 +15,13 @@ const $fragment5 = parseFragment`<div class="slds-page-header${0}"${2}><div clas
 const $fragment6 = parseFragment`<strong${3}>Technologies:</strong>`;
 const $fragment7 = parseFragment`<strong${3}>Difficulties:</strong>`;
 const $fragment8 = parseFragment`<strong${3}>Major Functionalities:</strong>`;
-const $fragment9 = parseFragment`<strong${3}>Achievements:</strong>`;
-const $fragment10 = parseFragment`<strong${3}>Objective:</strong>`;
-const $fragment11 = parseFragment`<strong${3}>Team Size:</strong>`;
-const $fragment12 = parseFragment`<strong${3}>Role on the Team:</strong>`;
-const $fragment13 = parseFragment`<strong${3}>Major thing learned on the project:</strong>`;
-const $fragment14 = parseFragment`<strong${3}>Responsibilities:</strong>`;
+const $fragment9 = parseFragment`<strong${3}>Technologies:</strong>`;
+const $fragment10 = parseFragment`<strong${3}>Clouds:</strong>`;
+const $fragment11 = parseFragment`<strong${3}>Objective:</strong>`;
+const $fragment12 = parseFragment`<strong${3}>Team Size:</strong>`;
+const $fragment13 = parseFragment`<strong${3}>Role on the Team:</strong>`;
+const $fragment14 = parseFragment`<strong${3}>Major thing learned on the project:</strong>`;
+const $fragment15 = parseFragment`<strong${3}>Responsibilities:</strong>`;
 const stc0 = {
   classMap: {
     "project-section": true
@@ -99,7 +100,7 @@ const stc14 = {
 const stc15 = {
   classMap: {
     "slds-col": true,
-    "slds-size_1-of-3": true
+    "slds-size_1-of-4": true
   },
   key: 28
 };
@@ -109,7 +110,7 @@ const stc16 = {
 const stc17 = {
   classMap: {
     "slds-col": true,
-    "slds-size_1-of-3": true
+    "slds-size_1-of-4": true
   },
   key: 33
 };
@@ -119,7 +120,7 @@ const stc18 = {
 const stc19 = {
   classMap: {
     "slds-col": true,
-    "slds-size_1-of-3": true
+    "slds-size_1-of-4": true
   },
   key: 38
 };
@@ -128,7 +129,8 @@ const stc20 = {
 };
 const stc21 = {
   classMap: {
-    "slds-m-top_medium": true
+    "slds-col": true,
+    "slds-size_1-of-4": true
   },
   key: 43
 };
@@ -136,28 +138,37 @@ const stc22 = {
   key: 46
 };
 const stc23 = {
-  key: 49
-};
-const stc24 = {
-  key: 52
-};
-const stc25 = {
   classMap: {
     "slds-m-top_medium": true
   },
-  key: 55
+  key: 48
+};
+const stc24 = {
+  key: 51
+};
+const stc25 = {
+  key: 54
 };
 const stc26 = {
-  key: 58
+  key: 57
 };
 const stc27 = {
+  classMap: {
+    "slds-m-top_medium": true
+  },
+  key: 60
+};
+const stc28 = {
+  key: 63
+};
+const stc29 = {
   "slds-list_dotted": true
 };
-const stc28 = [];
+const stc30 = [];
 function tmpl($api, $cmp, $slotset, $ctx) {
   const {st: api_static_fragment, k: api_key, d: api_dynamic_text, t: api_text, h: api_element, i: api_iterator, c: api_custom_element, f: api_flatten} = $api;
   return api_flatten([$cmp.printFormat ? api_element("section", stc0, [api_static_fragment($fragment1(), 2), api_element("div", stc1, api_iterator($cmp.projects, function (proj) {
-    return api_custom_element("lightning-card", _lightningCard, {
+    return proj.printPermit ? api_custom_element("lightning-card", _lightningCard, {
       classMap: stc2,
       props: {
         "title": proj.title
@@ -175,7 +186,7 @@ function tmpl($api, $cmp, $slotset, $ctx) {
         },
         key: api_key(16, cloud)
       });
-    }))]);
+    }))]) : null;
   }))]) : null, $cmp.webFormat ? api_flatten([api_static_fragment($fragment5(), 18), api_iterator($cmp.projects, function (proj) {
     return api_element("div", {
       classMap: stc8,
@@ -193,17 +204,21 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       return api_element("li", {
         key: api_key(37, functionality)
       }, [api_text(api_dynamic_text(functionality))]);
-    }))]), api_element("div", stc19, [api_static_fragment($fragment9(), 40), api_element("ul", stc20, api_iterator(proj.achievements, function (achievement) {
+    }))]), api_element("div", stc19, [api_static_fragment($fragment9(), 40), api_element("ul", stc20, api_iterator(proj.technologies, function (technology) {
       return api_element("li", {
-        key: api_key(42, achievement)
-      }, [api_text(api_dynamic_text(achievement))]);
-    }))])]), api_element("p", stc21, [api_static_fragment($fragment10(), 45), api_text(" " + api_dynamic_text(proj.objective))]), api_element("p", stc22, [api_static_fragment($fragment11(), 48), api_text(" " + api_dynamic_text(proj.teamSize))]), api_element("p", stc23, [api_static_fragment($fragment12(), 51), api_text(" " + api_dynamic_text(proj.role))]), api_element("p", stc24, [api_static_fragment($fragment13(), 54), api_text(" " + api_dynamic_text(proj.learnings))]), api_element("div", stc25, [api_static_fragment($fragment14(), 57), api_element("ul", stc26, api_iterator(proj.responsibilities, function (resp) {
+        key: api_key(42, technology)
+      }, [api_text(api_dynamic_text(technology))]);
+    }))]), api_element("div", stc21, [api_static_fragment($fragment10(), 45), api_element("ul", stc22, api_iterator(proj.clouds, function (cloud) {
       return api_element("li", {
-        classMap: stc27,
-        key: api_key(59, resp)
+        key: api_key(47, cloud)
+      }, [api_text(api_dynamic_text(cloud))]);
+    }))])]), api_element("p", stc23, [api_static_fragment($fragment11(), 50), api_text(" " + api_dynamic_text(proj.objective))]), api_element("p", stc24, [api_static_fragment($fragment12(), 53), api_text(" " + api_dynamic_text(proj.teamSize))]), api_element("p", stc25, [api_static_fragment($fragment13(), 56), api_text(" " + api_dynamic_text(proj.role))]), api_element("p", stc26, [api_static_fragment($fragment14(), 59), api_text(" " + api_dynamic_text(proj.learnings))]), api_element("div", stc27, [api_static_fragment($fragment15(), 62), api_element("ul", stc28, api_iterator(proj.responsibilities, function (resp) {
+      return api_element("li", {
+        classMap: stc29,
+        key: api_key(64, resp)
       }, [api_text(api_dynamic_text(resp))]);
     }))])])])]);
-  })]) : stc28]);
+  })]) : stc30]);
   /*LWC compiler v3.0.0*/
 }
 export default registerTemplate(tmpl);

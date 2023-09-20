@@ -22,7 +22,7 @@
     <div class="slds-grid slds-grid_vertical">
       <template for:each={projects} for:item="proj">
         <lightning-card class="experiance-card slds-m-top_medium slds-p-top_xx-small" key={proj.title}
-          title={proj.title}>
+          title={proj.title} if:true={proj.printPermit}>
           <div class="slds-p-horizontal_small">
             <div>
               <b>Objective/Scope:</b> {proj.objective}
@@ -77,7 +77,7 @@
 
           <div class="slds-grid slds-wrap">
             <!-- Grid Item for Lists -->
-            <div class="slds-col slds-size_1-of-3">
+            <div class="slds-col slds-size_1-of-4">
               <strong>Difficulties:</strong>
               <ul>
                 <template for:each={proj.difficulties} for:item="difficulty">
@@ -86,7 +86,7 @@
               </ul>
             </div>
 
-            <div class="slds-col slds-size_1-of-3">
+            <div class="slds-col slds-size_1-of-4">
               <strong>Major Functionalities:</strong>
               <ul>
                 <template for:each={proj.majorFunctionalities} for:item="functionality">
@@ -95,11 +95,20 @@
               </ul>
             </div>
 
-            <div class="slds-col slds-size_1-of-3">
-              <strong>Achievements:</strong>
+            <div class="slds-col slds-size_1-of-4">
+              <strong>Technologies:</strong>
               <ul>
-                <template for:each={proj.achievements} for:item="achievement">
-                  <li key={achievement}>{achievement}</li>
+                <template for:each={proj.technologies} for:item="technology">
+                  <li key={technology}>{technology}</li>
+                </template>
+              </ul>
+            </div>
+
+            <div class="slds-col slds-size_1-of-4">
+              <strong>Clouds:</strong>
+              <ul>
+                <template for:each={proj.clouds} for:item="cloud">
+                  <li key={cloud}>{cloud}</li>
                 </template>
               </ul>
             </div>

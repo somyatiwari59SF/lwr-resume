@@ -1,0 +1,36 @@
+<template>
+  <section class="slds-m-top_x-large intro-section">
+      <div class="slds-page-header">
+          <div class="slds-page-header__row">
+              <div class="slds-page-header__col-title">
+                  <div class="slds-media">
+                      <div class="slds-media__figure">
+                          <span class="slds-avatar slds-avatar_large">
+                              <img alt="Profile Photo" src="/public/assets/profile-photo.png" title="Profile Photo" />
+                          </span>
+                      </div>
+                      <div class="slds-media__body">
+                          <div class="slds-page-header__name">
+                              <div class="slds-page-header__name-title">
+                                  <h1>
+                                      <span class="slds-page-header__title slds-truncate" title="About Me">About Me</span>
+                                  </h1>
+                              </div>
+                          </div>
+                          <p class="slds-page-header__name-meta">A Brief Introduction</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <lightning-card class="intro-card slds-m-top_medium slds-p-top_xx-small">
+          <div class="slds-p-horizontal_small">
+              <p class="slds-text-body_regular">{introduction}</p>
+              <div class="slds-m-top_medium">
+                  <h2 class="slds-text-heading_small">Aspirations</h2>
+                  <p class="slds-text-body_regular">{aspirations}</p>
+              </div>
+          </div>
+      </lightning-card>
+  </section>
+</template>

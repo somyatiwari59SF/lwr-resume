@@ -17,14 +17,14 @@ body {
   padding: 20px; 
   box-sizing: border-box;
   margin: 0 auto;
-
+  margin-top: 10px;
 }
 @media print {
   body {
       background-color: white;
       height: auto;
       padding: 0;
-      margin: 20mm;  /* vertical margins for printing */
+      margin: 1in;  /* vertical margins for printing */
   }
 
   .a4-paper {
@@ -32,6 +32,11 @@ body {
       margin-bottom: 10mm;  /* space between pages when printed */
       max-height: none;
       overflow: visible;
+      overflow-y: auto; 
+      background: white;
+      padding: 20px; 
+      box-sizing: border-box;
+      margin: 0 auto;
   }
 
   .a4-paper:last-child {

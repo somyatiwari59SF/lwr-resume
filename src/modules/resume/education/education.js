@@ -15,49 +15,38 @@ export default class Education extends LightningElement {
   }
   education = [
     {
-      institute: "BITS, Pilani",
-      degree: "Masters of Technology - Software Engineering ",
-      duration: "January 2023 - December 2025",
-      achievements: [],
-    },
-    {
       institute: "LNCT (RGPV), Indore",
-      degree: "Bachelor of Technology - Computer Science",
+      degree: "B.Tech in Computer Science",
       duration: "June 2015 - June 2019",
       hasAchievement: true,
       achievements: [
-        "Published 2 Research Papers:",
-        '- "Student Management System and How to Manage Growing Database & Performance"',
-        '- "Auto Reconsiling Finance Management System"',
-
-        "Volunteered as the Lead of the Student Photography Team for multiple events.",
-
-        "Handled the Final Year Tech Fest:",
-        "- Served as the Lead student team member.",
-        "- Led a diverse team of over 20 students across various departments.",
+        "Published 2 research papers on database management and finance reconciliation.",
+        "Led the Student Photography Team for multiple events.",
+        "Organized and led a team of 20+ students for the Final Year Tech Fest.",
       ],
     },
     {
       institute: "Laurels School International",
-      degree: "12th ISC (Indian School Certificate)",
+      degree: "12th ISC",
       duration: "June 2013 - June 2015",
       hasAchievement: true,
       achievements: [
-        "Worked with the Graphics team of the Anual Fest and helped them create the visuals for the Stage.",
-        "Developed one of the best Computer Science Project based on Java and Concepts of OOPs",
+        "Collaborated with the graphics team for the annual fest stage visuals.",
+        "Developed an advanced Java-based Computer Science project.",
       ],
     },
     {
       institute: "Laurels School International",
-      degree: "10th ICSE (Indian Certificate of Secondary Education)",
+      degree: "10th ICSE",
       duration: "June 2010 - June 2013",
       hasAchievement: true,
       achievements: [
-        "Achieved A Grade in German Language",
-        "Worked with the Anual Fest team of students and managed the dances & shows from the backend.",
+        "Achieved A Grade in German Language.",
+        "Managed backend operations for dances and shows during the annual fest.",
       ],
     },
   ];
+  
   timeline = [
     {
       institute: "Laurels School International",

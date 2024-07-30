@@ -13,7 +13,7 @@
                   </h1>
                 </div>
               </div>
-              <p class="slds-page-header__name-meta">4.5+ Year Experience</p>
+              <p class="slds-page-header__name-meta">6.0+ Year Experience</p>
             </div>
           </div>
         </div>
@@ -21,8 +21,8 @@
     </div>
     <div class="slds-grid slds-grid_vertical">
       <template for:each={experiences} for:item="exp">
-        <lightning-card class="experiance-card slds-m-top_medium slds-p-top_xx-small" key={exp.title2}
-          title={exp.title2}>
+        <lightning-card class="experiance-card slds-m-top_medium slds-p-top_xx-small" key={exp.title2}>
+          <h3 slot="title"><img width="60px" src={exp.companyLogoSrc} /><span class="slds-p-left_small"></span>{exp.title2}</h3>
           <div class="slds-p-horizontal_small">
             <ul>
               <template for:each={exp.description} for:item="desc">

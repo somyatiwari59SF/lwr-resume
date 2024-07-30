@@ -1,0 +1,12 @@
+
+hr {
+    margin: 5px 0px;
+  }
+  .hobby-card{
+    page-break-inside: avoid;
+
+  }  
+  .hobbies-section{
+    page-break-inside: avoid;
+
+  }

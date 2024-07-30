@@ -2,7 +2,7 @@ import { LightningElement, track } from "lwc";
 
 export default class DesktopHeader extends LightningElement {
   @track candidateInfo = {
-    name: "Somya Tiwari",
+    name: "Aman Tomar",
   };
   handleClick(event) {
     const button = event.currentTarget.dataset.button;
@@ -40,7 +40,7 @@ export default class DesktopHeader extends LightningElement {
     console.log(this.isMobile);
   }
   get totalExperiance(){
-    const startDate = new Date(2019, 5, 3); // Month is 0-indexed, so 5 represents June.
+    const startDate = new Date(2016, 5, 3); // Month is 0-indexed, so 5 represents June.
     const currentDate = new Date();
     let years = currentDate.getFullYear() - startDate.getFullYear();
     let months = currentDate.getMonth() - startDate.getMonth();

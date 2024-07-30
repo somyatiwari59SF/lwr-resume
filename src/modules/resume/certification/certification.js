@@ -32,12 +32,20 @@ export default class Experience extends LightningElement {
       certImgSrc: this.BASEURL + "Financial-Services-Cloud.png",
     },
     {
-      certName: "Salesforce Certified Platform Developer 1",
+      certName: "Salesforce Certified Platform Developer I",
       certNumber: "21827907",
       hascertNumber: true,
       hasissueDate: true,
       issueDate: "January 2021",
       certImgSrc: this.BASEURL + "PD1.png",
+    },
+    {
+      certName: "Salesforce Certified Platform Developer II",
+      certNumber: "3919318",
+      hascertNumber: true,
+      hasissueDate: true,
+      issueDate: "December 2023",
+      certImgSrc: this.BASEURL + "PD2.png",
     },
     {
       certName: "Salesforce Certified Administrator",
@@ -80,6 +88,14 @@ export default class Experience extends LightningElement {
       certImgSrc: this.BASEURL + "Industries-CPQ-Developer.png",
     },
     {
+      certName: "Salesforce Certified CPQ Specialist",
+      certNumber: "4641701",
+      hascertNumber: true,
+      hasissueDate: true,
+      issueDate: "July 2024",
+      certImgSrc: this.BASEURL + "cpq-specialist.png",
+    },
+    {
       certName: "Vlocity Certified Order Management Developer I",
       certNumber: "23492926",
       hascertNumber: true,
@@ -104,6 +120,14 @@ export default class Experience extends LightningElement {
       certImgSrc: this.BASEURL + "Sharing-and-Visibility-Architect.png",
     },
     {
+      certName: "Salesforce Certified Integration Architecture Designer",
+      certNumber: "4568050",
+      hascertNumber: true,
+      hasissueDate: true,
+      issueDate: "June 2022",
+      certImgSrc: this.BASEURL + "integration-architect.png",
+    },
+    {
       certName: "Salesforce Certified Data Architect",
       certNumber: "2819517",
       hascertNumber: true,
@@ -126,6 +150,22 @@ export default class Experience extends LightningElement {
       hasissueDate: true,
       issueDate: "May 2023",
       certImgSrc: this.BASEURL + "Sales-Cloud.png",
+    },
+    {
+      certName: "Salesforce Certified Service Cloud Consultant",
+      certNumber: "4372735",
+      hascertNumber: true,
+      hasissueDate: true,
+      issueDate: "April 2024",
+      certImgSrc: this.BASEURL + "service-cloud.png",
+    },
+    {
+      certName: "Salesforce Certified Experiance Cloud Consultant",
+      certNumber: "4567981",
+      hascertNumber: true,
+      hasissueDate: true,
+      issueDate: "June 2024",
+      certImgSrc: this.BASEURL + "experiance-cloud.png",
     },
     {
       certName:

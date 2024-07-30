@@ -2,7 +2,7 @@ import { LightningElement } from "lwc";
 import "@lwc/synthetic-shadow";
 
 export default class Main extends LightningElement {
-  format = "web"; // default to web format
+  format = "print"; // default to web format
 
   get printFormat() {
     return this.format === "print";

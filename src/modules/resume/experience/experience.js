@@ -1,6 +1,7 @@
 import { LightningElement, api } from "lwc";
 import "@lwc/synthetic-shadow";
 export default class Experience extends LightningElement {
+  BASEURL = "/public/assets/companylogo/";
   @api format = "web"; // default to web format
 
   get printFormat() {
@@ -20,11 +21,12 @@ export default class Experience extends LightningElement {
       company: "Salesforce India Pvt. Ltd.",
       location: "Pune, India",
       dates: "July 2022 - Current",
+      companyLogoSrc : this.BASEURL + "Salesforce-logo.png",
       description: [
-        "Drove advanced Industry Cloud solutions using Apex, Visualforce, and Lightning.",
-        "Enhanced customer processes using specialized tools such as Data Raptors and Industries CPQ.",
-        "Collaborated with AT&T for bespoke solution delivery, and ensured efficient and on-time user story delivery using Copado.",
-        "Achieved consistent client satisfaction across various Salesforce domains like Manufacturing Cloud and Communication CPQ.",
+        "Implemented advanced Industry Cloud solutions using Apex, Visualforce, and Lightning.",
+        "Streamlined customer processes with Data Raptors and Industries CPQ.",
+        "Delivered bespoke solutions for clients such as AT&T, ANZ Bank, American Family, and currently working with PPG - Pinnacle Pet Group, ensuring timely user story delivery via Copado.",
+        "Achieved high client satisfaction across Salesforce domains including Manufacturing Cloud and Communication CPQ.",
       ],
     },
     {
@@ -34,11 +36,12 @@ export default class Experience extends LightningElement {
       company: "360 Degree Cloud Pvt. Ltd.",
       location: "Delhi, India",
       dates: "August 2021 - July 2022",
+      companyLogoSrc : this.BASEURL + "360 degree cloud.webp",
       description: [
-        "Designed and executed tailored Salesforce solutions aligning with business objectives.",
-        "Collaborated with cross-functional teams for holistic solution delivery and ensured high data security standards.",
-        "Enhanced system performance and code quality, and mentored junior developers.",
-        "Delivered on-time projects across domains like Manufacturing Cloud and Sales Cloud.",
+        "Developed tailored Salesforce solutions aligning with business objectives.",
+        "Ensured secure, holistic solutions through cross-functional team collaboration.",
+        "Enhanced system performance and code quality; mentored junior developers.",
+        "Delivered projects on time in Manufacturing Cloud and Sales Cloud domains.",
       ],
     },
     {
@@ -47,11 +50,13 @@ export default class Experience extends LightningElement {
       title2: "Salesforce Developer at MindRuby Technologies LLP",
       company: "MindRuby Technologies LLP",
       location: "Indore, India",
-      dates: "September 2020  - August 2021",
+      dates: "September 2020 - August 2021",
+      companyLogoSrc : this.BASEURL + "mr-logo.png",
       description: [
-        "Developed scalable Salesforce solutions using Apex, Visualforce, and Lightning, leading to enhanced operational efficiency and customer experience.",
-        "Contributed to diverse projects, with a significant focus on Sales Cloud and system integrations.",
-        "Designed Asynchronous Apex solutions and parsed complex JSON for intuitive displays within Lightning Web Components (LWC).",
+        "Developed scalable Salesforce solutions using Apex, Visualforce, and Lightning.",
+        "Enhanced operational efficiency and customer experience.",
+        "Contributed to Sales Cloud and system integration projects.",
+        "Designed Asynchronous Apex solutions and parsed complex JSON for LWC displays.",
       ],
     },
     {
@@ -61,14 +66,14 @@ export default class Experience extends LightningElement {
       company: "Idevate Solutions Pvt. Ltd.",
       location: "Indore, India",
       dates: "June 2019 - September 2020",
+      companyLogoSrc : this.BASEURL + "ideavate.png",
       description: [
-        "Optimized business processes and enhanced user engagement through tailored Salesforce solutions.",
-        "Adopted a user-focused approach for feature delivery and collaborated with teams for integrated solutions.",
+        "Optimized business processes and enhanced user engagement with tailored Salesforce solutions.",
+        "Focused on user-centric feature delivery and team collaboration.",
         "Troubleshot issues and maintained alignment with industry best practices.",
       ],
     },
-    // More experiences here...
-  ];
+  ];  
   selectedJob = {};
   openModal(event) {
     let id = event.target.dataset.id;
